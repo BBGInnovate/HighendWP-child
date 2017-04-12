@@ -1,60 +1,11 @@
-var COLOR_HOVER = "#CC0000"; //the color that highlights a hot spot when you roll over a country
-var COLOR_ACTIVE = "#FFFFFF"; //background color when a button in the hot spot bar is active
-
-var hideUnselectedCountries = true;
-var normalColors = {
-	iran: "#CC99B3",
-	russia: "#ebdb8b",
-	china: "#2B9ED4",
-	cuba: "#71B771",
-	cve: "#E67300",
-	all: "#999999"
-}
-
-colors = normalColors;
-
-//define each sphere an dthe countires it is comprised of and influences
-var spheres = {
-	iran: {
-		comprisedOf: ['Iran'],
-		influences: ['Turkmenistan', 'Afghanistan', 'Pakistan', 'Yemen', 'Iraq', 'Azerbaijan'],
-		color: colors['iran'],
-		label: "Iran"
-	},
-	russia: {
-		comprisedOf: ['Russia'],
-		influences: ['Ukraine','Estonia','Latvia','Lithuania','Belarus','Moldova','Syria','Kazakhstan','Uzbekistan','Turkmenistan','Tajikistan','Kyrgyzstan','Azerbaijan','Armenia','Georgia','Israel'],
-		color: colors['russia'],
-		label: "Russia"
-	},
-	cuba: {
-		comprisedOf: ['Cuba'],
-		influences: ['Venezuela','Colombia'],
-		color: colors['cuba'],
-		label: "Cuba"
-	},
-	cve: {
-		comprisedOf: ['Russia'],
-		influences: [
-			'Afghanistan','Armenia','Iran','Iraq','Kazakhstan','Kyrgyzstan','Pakistan','Tajikistan','Turkmenistan','Uzbekistan','Belarus','Georgia','Serbia',
-			'Bangladesh','Philippines','Thailand','Malaysia','India','Indonesia',
-			'Israel','Jordan','Kuwait','Lebanon','Saudi Arabia','Syria','Turkey','Yemen','Egypt','Morocco','Libya','Algeria',
-			'Mali', 'Mauritania', 'Chad', 'Western Sahara', 'Sudan', 'Eritrea', 'Ethiopia', 'Somalia', 'Cameroon', 'Benin', 'Niger', 'Burkina Faso', 'Nigeria', 'Kenya', 'Tanzania', 'Uganda'
-		],
-		color: colors['cve'],
-		label: "Countering Violent Extremism"
-	},
-	china: {
-		comprisedOf: ['China'],
-		influences: [
-			'Bangladesh','Bhutan', 'Nepal', 'Thailand', 'Myanmar', 'Vietnam', 'Lao People\'s Democratic Republic', 'North Korea', 'South Korea', 'Cambodia', 'Malaysia'  ],
-		color: colors['china'],
-		label: "China"
-	},
-};
-
 var fullCountryList = AmCharts.maps.worldLow.svg.g.path;
 var activeSphere = "all";
+
+var COLOR_FREE = "#5EAB9F";
+var COLOR_PARTIALLY_FREE = "#B5A052";
+var COLOR_NOT_FREE = "#AF4048";
+
+
 
 cMap = {}; //this allows us to look a country's ID up from its title, so that the data can originally be entered as country titles
 cMapByID = {};
@@ -75,14 +26,12 @@ function getAreas() {
 		var freedomStatus = o[3];
 		
 		if (cMap.hasOwnProperty(countryName.toLowerCase())) {
-			var countryID = cMap[countryName.toLowerCase()];
-			var colorFill = "";
+			var countryID = cMap[countryName.toLowerCase()]; 
+			var colorFill = COLOR_NOT_FREE;
 			if (freedomStatus == "F") {
-				colorFill = "#90EE90";
+				colorFill = COLOR_FREE;
 			} else if (freedomStatus == "PF") {
-				colorFill = "#FFD700";
-			} else {
-				colorFill = "#7a3336";
+				colorFill = COLOR_PARTIALLY_FREE;
 			}
 			var a = {
 				id: countryID,
@@ -101,6 +50,19 @@ function getAreas() {
 
 	jQuery(document).ready(function() {
 		targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
+		var images = new Array();
+		for (var i = 0; i < threats.length; i++) {
+			var t = threats[i];
+			var img = {
+				svgPath: targetSVG,
+				zoomLevel: 5,
+				scale: 1,
+				//title: t.name + " - " + t.description,
+				latitude: t.latitude,
+				longitude: t.longitude
+			}
+			images.push(img);
+		}
 
 		map = AmCharts.makeChart( "chartdiv", {
 			theme: "light",
@@ -108,30 +70,20 @@ function getAreas() {
 			type: "map",
 			zoomOnDoubleClick : false,
 			imagesSettings: {
-				rollOverColor: "#089282",
-				rollOverScale: 3,
-				selectedScale: 3,
-				selectedColor: "#089282",
+				// rollOverColor: "#089282",
+				// rollOverScale: 3,
+				// selectedScale: 3,
+				// selectedColor: "#089282",
 				color: "#13564e"
+			},
+			balloon: {
+				fillAlpha: 1,
+				fillColor: "#CCCCCC"
 			},
 			dataProvider: {
 				map: "worldLow",
 				areas:getAreas("all"),
-				images: [ {
-			      svgPath: targetSVG,
-			      zoomLevel: 5,
-			      scale: 1,
-			      title: "Vienna",
-			      latitude: 48.2092,
-			      longitude: 16.3728
-			    }, {
-			      svgPath: targetSVG,
-			      zoomLevel: 5,
-			      scale: 1,
-			      title: "Minsk",
-			      latitude: 53.9678,
-			      longitude: 27.5766
-			    }],
+				images: images,
 			},
 			areasSettings: {
 				autoZoom: false,
