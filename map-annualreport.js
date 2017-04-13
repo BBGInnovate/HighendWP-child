@@ -101,6 +101,9 @@ function getAreas() {
 			dragMap:false 
 		});
 
+		jQuery('.free').css('background-color', COLOR_FREE);
+		jQuery('.partially-free').css('background-color', COLOR_PARTIALLY_FREE);
+		jQuery('.not-free').css('background-color', COLOR_NOT_FREE);
 	});
 
 })(jQuery);
