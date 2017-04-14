@@ -80,6 +80,9 @@ function ttpmap_func( $atts ) {
 				display:inline-table;
 				background: #000000;
 			}
+			#main-content {
+				padding-top: 0px !important;
+			}
 		</style>
 		<!-- Resources -->
 		<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
@@ -171,6 +174,13 @@ function videointro_func( $atts ) {
 
 
 	<style>
+		#introvideorow .wpb_column {
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
+		#introvideorow {
+			margin-bottom:0px;
+		}
 		body {
 			margin:0px;
 		}
@@ -192,7 +202,7 @@ function videointro_func( $atts ) {
 			height: 100%;
 			left: 0px;
 			top: 0px;
-			background: #FF0000;
+			/*background: #FF0000;*/
 			z-index: 5;
 		}
 		.background-video-inner {
@@ -317,7 +327,7 @@ height: 100%;
 			<div class=content>
 				<h2>Serving Freedom<br>and Democracy</h2>
 				<i id="btnPlay" class="fa fa-play fa-2x" style="cursor:pointer"></i>
-				<p>Broadcasting Board of Governors<BR>2016 Annual Report</p>
+				<!--<p>Broadcasting Board of Governors<BR>2016 Annual Report</p> -->
 				<!-- <div class=advance><button></button></div> -->
 			</div>
 		</div>
@@ -330,20 +340,47 @@ height: 100%;
 			</div>
 		</div>
 	</div>
-	<div class="more">
+	<!-- <div class="more">
 		<p>More Content</p>
-	</div>
+	</div> -->
+
 
 	<script type="text/javascript">
+		
+		window.circleRoll = function(entity) {
+			alert(entity + " clicked!!!");
+		}
+		function toggleCircleDiv(entity, direction) {
+			if (direction == "out") {
+				jQuery('#circleTooltip').hide();
+			} else {
+				jQuery("div[id^='circleTooltip_']").hide();
+				jQuery('#circleTooltip_'+entity).show();	
+				jQuery('#circleTooltip').show();
+			}
+		}
+
 		jQuery( document ).ready(function() {
 			jQuery('#btnPlay').click(function(e) {
 				toggleVideo('');
-				
 			});
 			jQuery('.close').click(function(e) {
 				toggleVideo('hide');
 			});
+
+			jQuery("path[id$='_circle'").hover( 
+				function(e) {
+					var entity = jQuery(this).attr('id').split("_").shift();
+					toggleCircleDiv(entity,'in');
+				},
+				function(e) {
+					toggleCircleDiv('','out');
+				}
+			);
+
+			jQuery('#circleTooltip').hide().addClass('hb-testimonial');
 		});
+
 	</script>
 
 
