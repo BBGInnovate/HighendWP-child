@@ -293,18 +293,18 @@ function videointro_func( $atts ) {
 		}
 		.popup-video-holder {
 			position: relative;
-padding-bottom: 56.25%;
-padding-top: 30px; height: 0; overflow: hidden;
+			padding-bottom: 56.25%;
+			padding-top: 30px; height: 0; overflow: hidden;
 		}
 		.popup-video-holder iframe,
-.popup-video-holder object,
-.popup-video-holder embed {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
+		.popup-video-holder object,
+		.popup-video-holder embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 
 	</style>
 
@@ -340,16 +340,34 @@ height: 100%;
 			</div>
 		</div>
 	</div>
-	<!-- <div class="more">
-		<p>More Content</p>
-	</div> -->
 
+	<style>
+
+		div[id^='circleTooltip_'] {
+			padding: 20px;
+			border: 1px solid #EBEBEB;
+			position: relative;
+			color:#FFF;
+		}
+		#circleTooltip_voa {
+			background: #538EBD;
+		}
+		#circleTooltip_rfa {
+			background: #2D655E;
+		}
+		#circleTooltip_mbn {
+			background: #7E3536;
+		}
+		#circleTooltip_ocb {
+			background: #92AECF;
+		}
+		#circleTooltip_rferl {
+			background: #887639;
+		}
+	</style>
 
 	<script type="text/javascript">
 		
-		window.circleRoll = function(entity) {
-			alert(entity + " clicked!!!");
-		}
 		function toggleCircleDiv(entity, direction) {
 			if (direction == "out") {
 				jQuery('#circleTooltip').hide();
@@ -368,9 +386,11 @@ height: 100%;
 				toggleVideo('hide');
 			});
 
-			jQuery("path[id$='_circle'").hover( 
+			jQuery("path[class$='_circle'],g[class$='_circle']").css('cursor','pointer'); 			
+
+			jQuery("path[class$='_circle'],g[class$='_circle']").hover( 
 				function(e) {
-					var entity = jQuery(this).attr('id').split("_").shift();
+					var entity = jQuery(this).attr('class').split("_").shift();
 					toggleCircleDiv(entity,'in');
 				},
 				function(e) {
@@ -378,7 +398,7 @@ height: 100%;
 				}
 			);
 
-			jQuery('#circleTooltip').hide().addClass('hb-testimonial');
+			jQuery('#circleTooltip').hide() //.addClass('hb-testimonial');
 		});
 
 	</script>
@@ -409,3 +429,13 @@ vc_map( array(
 ) );
 
 ?>
+
+<style>
+	section#ceoBackgroundVideo {
+		background: url(https://www.bbg.gov/wp-content/media/2011/11/4.1-1024x683.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+</style>
