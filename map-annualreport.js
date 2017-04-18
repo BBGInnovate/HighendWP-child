@@ -25,22 +25,24 @@ function getAreas() {
 		var freedomScore = o[2];
 		var freedomStatus = o[3];
 		
-		if (cMap.hasOwnProperty(countryName.toLowerCase())) {
-			var countryID = cMap[countryName.toLowerCase()]; 
-			var colorFill = COLOR_NOT_FREE;
-			if (freedomStatus == "F") {
-				colorFill = COLOR_FREE;
-			} else if (freedomStatus == "PF") {
-				colorFill = COLOR_PARTIALLY_FREE;
+		if (bbgStatus != "Not targeted") {
+			if (cMap.hasOwnProperty(countryName.toLowerCase())) {
+				var countryID = cMap[countryName.toLowerCase()]; 
+				var colorFill = COLOR_NOT_FREE;
+				if (freedomStatus == "F") {
+					colorFill = COLOR_FREE;
+				} else if (freedomStatus == "PF") {
+					colorFill = COLOR_PARTIALLY_FREE;
+				}
+				var a = {
+					id: countryID,
+					title: countryName,
+					color: colorFill,
+					alpha: 1
+				}
+				areas.push(a);
 			}
-			var a = {
-				id: countryID,
-				title: countryName,
-				color: colorFill,
-				alpha: 1
-			}
-			areas.push(a);
-		} 
+		}
 	}
 	
 	return areas;
@@ -104,6 +106,7 @@ function getAreas() {
 		jQuery('.free').css('background-color', COLOR_FREE);
 		jQuery('.partially-free').css('background-color', COLOR_PARTIALLY_FREE);
 		jQuery('.not-free').css('background-color', COLOR_NOT_FREE);
+
 	});
 
 })(jQuery);

@@ -77,7 +77,7 @@ function ttpmap_func( $atts ) {
 			.legendBox {
 				width: 15px;
 				height: 15px;
-				display:inline-table;
+				display:inline-block;
 				background: #000000;
 			}
 			#main-content {
