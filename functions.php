@@ -185,19 +185,17 @@ function ttpmap_func( $atts ) {
 			}
 			setTimeout(fakeWindowResize, 2000); 
 
-			// jQuery('.popmake-933') 
-			// 	.on('pumBeforeOpen', function () {
-			// 		console.log("let us add the autoplay"); 
-			// 		var $iframe = jQuery('iframe', jQuery(this)),
-			// 			src = $iframe.prop('src');
-			// 		$iframe.prop('src', '').prop('src', src + '?autoplay=1');
-			// 	});
-			// 	jQuery('#pum-123')
-			// 	.on('pumBeforeClose', function () {
-			// 		var $iframe = jQuery('iframe', jQuery(this)),
-			// 			src = $iframe.prop('src');
-			// 		$iframe.prop('src', '').prop('src', src.replace('?autoplay=1', ''));
-			// 	});
+			jQuery(document).on('pumBeforeOpen', '.pum', function () {
+				var $iframe = jQuery('iframe', jQuery(this));
+					if ("undefined" === typeof window.popSrc) {
+						window.popSrc = $iframe.prop('src');
+					}
+			 		$iframe.prop('src', '').prop('src', window.popSrc + '?autoplay=1');
+			}).on('pumBeforeClose', function () {
+					var $iframe = jQuery('iframe', jQuery(this));
+					$iframe.prop('src', '').prop('src', window.popSrc);
+				});
+				
 		});
 
 	</script>
