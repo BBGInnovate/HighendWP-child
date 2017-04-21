@@ -83,6 +83,9 @@ function ttpmap_func( $atts ) {
 			#main-content {
 				padding-top: 0px !important;
 			}
+			#slider-section, #rev_slider_2_1_wrapper {
+				background: #062843 !important; 
+			}
 		</style>
 		<!-- Resources -->
 		<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
