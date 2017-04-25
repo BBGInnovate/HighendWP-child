@@ -179,11 +179,13 @@ function ttpmap_func( $atts ) {
 			);
 			jQuery('#circleTooltip').hide() //.addClass('hb-testimonial');
 
-			//there is an issue with the Visual Composer line chart that happens on the hoempage
+			//there is an issue with the Visual Composer line chart that happens on the hompage
+			//adding this window resize call makes sure that the Waypoint will get recalculated at the appropriate times
+			//so that the animation will be triggered
 			function fakeWindowResize(){
 				jQuery(window).resize();
 			}
-			setTimeout(fakeWindowResize, 2000); 
+			setInterval(fakeWindowResize, 1500); 
 
 			jQuery(document).on('pumBeforeOpen', '.pum', function () {
 				var $iframe = jQuery('iframe', jQuery(this));
