@@ -37,7 +37,7 @@ jQuery( document ).ready(function() {
 	 		$iframe.prop('src', '').prop('src', window.popSrc + '?autoplay=1');
 	}).on('pumBeforeClose', function () {
 			var $iframe = jQuery('iframe', jQuery(this));
-			$iframe.prop('src', '').prop('src', window.popSrc);
+			//$iframe.prop('src', '').prop('src', window.popSrc);
 		});
 		
 });

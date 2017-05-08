@@ -193,7 +193,7 @@ threats=[
         "year": "2016",
         "niceDate": "Apr 10, 2016",
         "status": "threatened",
-        "description": "Police searched the home of several RFE\/RL contributors. Moscow-backed Crimean Prosecutor General&#8217;s Office says it has launched a criminal case against one of these people, Mykola Semena, alleging that he engaged in &#8220;extremism&#8221; and agitated for &#8220;violations of Russia&#8217;s territorial integrity&#8221; on the basis of his journalistic work. The prosecutor also called for the closure of RFE\/RL&#8217;s Crimea Realities website, one of the last remaining sources of independent news on Russia-annexed Crimea, claiming that the website seeks to discredit the Russian Federation, incites interethnic hatred and promotes extremism. ",
+        "description": "Police searched the home of several RFE\/RL contributors. Moscow-backed Crimean Prosecutor General&#8217;s Office says it has launched a criminal case against one of these people, Mykola Semena, alleging that he engaged in &#8220;extremism&#8221; and agitated for &#8220;violations of Russia&#8217;s territorial integrity&#8221; on the basis of his journalistic work.",
         "mugshot": "",
         "network": [
             "rferl"
@@ -210,7 +210,7 @@ threats=[
         "year": "2016",
         "niceDate": "Apr 01, 2016",
         "status": "threatened",
-        "description": "While covering Chinese President Xi Jinping\u2019s visit to the nuclear security summit in Washington in April, reporters from RFA\u2019s Tibetan Service were harassed by Chinese nationalist demonstrators gathering at the Convention Center. The reporter struggled to file her report but was met by a mob of demonstrators using Chinese flags to obstruct her broadcast. Demonstrators even resorting to physical contact as they pushed and shoved her and her colleagues until police intervened. This incident serves as an illustration of the kind of intimidation Radio Free Asia reporters have to face, even in Washington, DC. The incident was captured on video and shared via YouTube and Twitter. Reporters from the New York Times and representatives from Human Rights Watch shared the video via social media.",
+        "description": "While covering Chinese President Xi Jinping\u2019s visit to the nuclear security summit in Washington in April, reporters from RFA\u2019s Tibetan Service were harassed by Chinese nationalist demonstrators gathering at the Convention Center.",
         "mugshot": "",
         "network": [
             "rfa"
