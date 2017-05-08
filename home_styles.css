@@ -1,0 +1,30 @@
+div[id^='circleTooltip_'] {
+	padding: 20px;
+	border: 1px solid #EBEBEB;
+	position: relative;
+	color:#FFF;
+}
+#circleTooltip_voa {
+	background: #538EBD;
+}
+#circleTooltip_rfa {
+	background: #2D655E;
+}
+#circleTooltip_mbn {
+	background: #7E3536;
+}
+#circleTooltip_ocb {
+	background: #92AECF;
+}
+#circleTooltip_rferl {
+	background: #887639;
+}
+.vc_chart-legend li {
+	list-style-type: none !important;
+}
+#main-content {
+				padding-top: 0px !important;
+			}
+			#slider-section, #rev_slider_2_1_wrapper {
+				background: #062843 !important; 
+			}
