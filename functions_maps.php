@@ -64,7 +64,7 @@ function ttpmap_func( $atts ) {
 		<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
 		
 		<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/threats.js'></script>
-		<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/map-annualreport.js'></script>
+		<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/map-pressFreedomAndThreats.js'></script>
 
 		<!-- HTML --> 
 		<?php 
