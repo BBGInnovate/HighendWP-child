@@ -62,7 +62,7 @@ function ttpmap_func( $atts ) {
 	<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/mapdata-worldLow.js'></script>
 	
 	<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/threats.js'></script>
-	<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/map-annualreport.js'></script>
+	<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/map-pressFreedomAndThreats.js'></script>
 
 	<!-- HTML --> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
