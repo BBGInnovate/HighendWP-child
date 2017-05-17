@@ -69,8 +69,8 @@ var spheres = {
 		comprisedOf: ['Angola','Benin','Botswana','Burkina Faso','Burundi','Cameroon','Cape Verde','Central African Republic','Chad','Republic of Congo','Democratic Republic of Congo','CÃ´te d\'Ivoire','Djibouti','Equatorial Guinea','Eritrea','Ethiopia','Gabon','Gambia','Ghana','Guinea','Guinea-Bissau','Kenya','Lesotho','Liberia','Madagascar','Malawi','Mali','Mauritania','Mauritius','Mozambique','Namibia','Niger','Nigeria','Réunion','Rwanda','Sao Tome and Principe','Senegal','Sierra Leone','Somalia','South Sudan','Sudan','Swaziland','Tanzania','Togo','Uganda','Western Sahara','Zambia','Zimbabwe'],
 		influences: ['Venezuela','Colombia'],
 		color: colors['ssa'],
-		label: "Subsarahan Africa",
-		about: "Although sub-Saharan Africa was not explicitly named as one of the top five priorities, the work that BBG broadcasters do there is significant. According to Freedom House, 94% of countries in sub-Saharan Africa have a Partly Free or Not Free media environment. VOA broadcasts in more than a dozen languages throughout the region, providing what is often the only source of unbiased news and information."
+		label: "Sub-Saharan Africa",
+		about: "Although Sub-Saharan Africa was not explicitly named as one of the top five priorities, the work that BBG broadcasters do there is significant. According to Freedom House, 94% of countries in Sub-Saharan Africa have a Partly Free or Not Free media environment. VOA broadcasts in more than a dozen languages throughout the region, providing what is often the only source of unbiased news and information."
 	},
 	cve: {
 		comprisedOf: ['Russia'],
