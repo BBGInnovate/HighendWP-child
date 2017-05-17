@@ -160,6 +160,7 @@ function hotspotmap_func( $atts ) {
 			height: 15px;
 			display:inline-table;
 			background: #000000;
+			margin-top: 1em;
 		}
 		/* start expanding the print styles */
 		#chartdiv {
@@ -220,11 +221,11 @@ function hotspotmap_func( $atts ) {
 		  cursor: pointer;
 		  display: inline-block;
 		  font-family: "Lato", "Helvetica", "Arial", sans-serif;
-		  font-size: 1rem;
+		  font-size: .9rem;
 		  font-weight: 700;
 		  line-height: 1;
 		  outline: none;
-		  padding: .5rem 1rem;
+		  padding: .5rem .3rem;
 		  text-align: center;
 		  text-decoration: none;
 		  width: 100%;
@@ -258,8 +259,8 @@ function hotspotmap_func( $atts ) {
 		--><button type="button" title="CUBA" class=" btn-default cuba" value="cuba"><span class="bbg__map__button-text">CUBA</span></button><!--
 		--><button type="button" title="IRAN" class=" btn-default iran" value="iran"><span class="bbg__map__button-text">IRAN</span></button><!--
 		--><button type="button" title="RUSSIA" class=" btn-default russia" value="russia"><span class="bbg__map__button-text">RUSSIA</span></button><!--
-		--><button type="button" title="COUNTERING VIOLENT EXTREMISM" class=" btn-default cve" value="cve"><span class="bbg__map__button-text">COUNTERING VIOLENT EXTREMISM</span></button><!--
-		--></div>
+		--><button type="button" title="COUNTERING VIOLENT EXTREMISM" class=" btn-default cve" value="cve"><span class="bbg__map__button-text">CVE</span></button><!--
+		--><button type="button" title="SUBSAHARAN AFRICA" class=" btn-default ssa" value="ssa"><span class="bbg__map__button-text">SUBSAHARAN AFRICA</span></button></div>
 	<div align="center" id="mapFilters" class="u--hide-medium-large">
 		<BR>
 		<select id="hotSpotPicker">
@@ -269,6 +270,7 @@ function hotspotmap_func( $atts ) {
 			<option value="cuba">Cuba</option>
 			<option value="iran">Iran</option>
 			<option value="russia">Russia</option>
+			<option value="ssa">Subsaharan Africa</option>
 		</select>
 	</div>
 
@@ -282,7 +284,8 @@ function hotspotmap_func( $atts ) {
 			<div class="legendBox cuba"></div> Cuba 
 			<div class="legendBox iran"></div> Iran 
 			<div class="legendBox russia"></div> Russia<BR>
-			<div class="legendBox cve"></div> Countering Violent Extremism
+			<div class="legendBox cve"></div> CVE
+			<div class="legendBox ssa"></div> Subsaharan Africa
 		</div>
 	</div>
 

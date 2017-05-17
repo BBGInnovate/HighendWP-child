@@ -9,6 +9,7 @@ var color_green = "#2e8540";
 var color_orange = "orange";
 var color_ocb = "#653792";
 var color_mbn = "#BB3530";
+var color_ssa = "#836953";
 
 //primary colors for our various hot spots
 var lisaFrankColors = {
@@ -17,6 +18,7 @@ var lisaFrankColors = {
 	china: color_mbn,
 	cuba: color_ocb,
 	cve: color_primary,
+	ssa: color_ssa,
 	all: color_secondary_darkest
 }
 var pastelColors = {
@@ -25,7 +27,8 @@ var pastelColors = {
 	china: "#a791b4",
 	cuba: "#85c5e3",
 	cve: "#C9B7AD",
-	all: "#999999"
+	all: "#999999",
+	ssa:"#836953"
 }
 var normalColors = {
 	iran: "#CC99B3",
@@ -33,7 +36,8 @@ var normalColors = {
 	china: "#2B9ED4",
 	cuba: "#71B771",
 	cve: "#E67300",
-	all: "#999999"
+	all: "#999999",
+	ssa:"#836953"
 }
 
 colors = normalColors;
@@ -58,6 +62,12 @@ var spheres = {
 		color: colors['cuba'],
 		label: "Cuba"
 	},
+	ssa: {
+		comprisedOf: ['Angola','Benin','Botswana','Burkina Faso','Burundi','Cameroon','Cape Verde','Central African Republic','Chad','Republic of Congo','Democratic Republic of Congo','CÃ´te d\'Ivoire','Djibouti','Equatorial Guinea','Eritrea','Ethiopia','Gabon','Gambia','Ghana','Guinea','Guinea-Bissau','Kenya','Lesotho','Liberia','Madagascar','Malawi','Mali','Mauritania','Mauritius','Mozambique','Namibia','Niger','Nigeria','Réunion','Rwanda','Sao Tome and Principe','Senegal','Sierra Leone','Somalia','Sudan','Swaziland','Tanzania','Togo','Uganda','Western Sahara','Zambia','Zimbabwe'],
+		influences: ['Venezuela','Colombia'],
+		color: colors['ssa'],
+		label: "Subsarahan Africa"
+	},
 	cve: {
 		comprisedOf: ['Russia'],
 		influences: [
@@ -69,6 +79,7 @@ var spheres = {
 		color: colors['cve'],
 		label: "Countering Violent Extremism"
 	},
+	
 	china: {
 		comprisedOf: ['China'],
 		influences: [
@@ -170,6 +181,7 @@ function initMobileLegend() {
 	jQuery('.iran').css('background-color', colors['iran']);
 	jQuery('.russia').css('background-color', colors['russia']);
 	jQuery('.cve').css('background-color', colors['cve']);
+	jQuery('.ssa').css('background-color', colors['ssa']);
 }
 
 function resetButton(btnName) {
