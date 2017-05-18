@@ -39,10 +39,17 @@ function getAreas() {
 					colorFill = COLOR_PARTIALLY_FREE;
 					freedomLabel = "Partially Free";
 				}
-				var title = "<div style='font-size:14px; font-weight:bold;'>" + countryName + "</div>" + freedomLabel + "<BR>Press Freedom: " + freedomScore + "/100";
+				var title = "<div style='font-size:14px; font-weight:bold;'>" + countryName + "</div><div style='font-size:13px;'><i style='font-size:11px; color:" + colorFill + ";' class='fa fa-square' aria-hidden='true'></i> Press Freedom: " + freedomScore;
 				if (internetFreedomScore != "") {
-					title += "<BR>Internet Freedom: " + internetFreedomScore + "/100";
+					var colorFill2 = COLOR_NOT_FREE;
+					if (internetFreedomStatus == "F") {
+						colorFill2 = COLOR_FREE;
+					} else if (internetFreedomStatus == "PF") {
+						colorFill2 = COLOR_PARTIALLY_FREE;
+					}
+					title += "<BR><i style='font-size:11px; color:" + colorFill2 + ";' class='fa fa-square' aria-hidden='true'></i>&nbsp;Internet Freedom: " + internetFreedomScore;
 				}
+				title += "</div><div style='font-size:9px;'>(0=Most Free, 100=Least Free)</div>";
 
 				var a = {
 					id: countryID,

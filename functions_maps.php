@@ -12,7 +12,7 @@ function ttpmap_func( $atts ) {
 	$freeNotFreeStr = json_encode(new ArrayValue($freeNotFreeObj), JSON_PRETTY_PRINT);
 	
     ob_start();
-?>
+?><script src="https://use.fontawesome.com/39332d3b78.js"></script>
 	<style>
 		#chartdiv {
 			border: 1px solid #CCC;
