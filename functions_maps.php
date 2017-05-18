@@ -173,12 +173,12 @@ function hotspotmap_func( $atts ) {
 		}
 		@media screen and (min-width: 600px) {
 		  #chartdiv {
-		    height: 400px;
+		    height: 350px;
 		  }
 		}
 		@media screen and (min-width: 900px) {
 		  #chartdiv {
-		    height: 500px;
+		    height: 400px;
 		  }
 		}
 
