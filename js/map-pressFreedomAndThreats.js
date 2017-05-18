@@ -143,10 +143,10 @@ function getAreas() {
 			},
 			zoomControl:  {
 				zoomControlEnabled: isMobileDevice(),
-				panControlEnabled: isMobileDevice(),
+				panControlEnabled: false,
 				homeButtonEnabled: false
 			},
-			dragMap:false
+			dragMap:isMobileDevice()
 		});
 
 		jQuery('.free').css('background-color', COLOR_FREE);
