@@ -142,7 +142,7 @@ function getAreas() {
 				outlineThickness: 0.1
 			},
 			zoomControl:  {
-				zoomControlEnabled: isMobileDevice(),
+				zoomControlEnabled: false,
 				panControlEnabled: false,
 				homeButtonEnabled: false
 			},
