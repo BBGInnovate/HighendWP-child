@@ -110,7 +110,8 @@ function getAreas() {
 			},
 			balloon: {
 				fillAlpha: 1,
-				fillColor: "#EEE"
+				fillColor: "#EEE",
+				borderThickness: 2
 			},
 			dataProvider: {
 				map: "worldLow",
