@@ -49,28 +49,32 @@ var spheres = {
 		influences: ['Turkmenistan', 'Afghanistan', 'Pakistan', 'Yemen', 'Iraq', 'Azerbaijan'],
 		color: colors['iran'],
 		label: "Iran",
-		about: "VOA and RFE/RL target urban youth who are politically savvy and active online, providing platforms for free thought and debate not tolerated in the local media. VOA’s Persian Service works to fight misperceptions and stereotypes about the U.S. and provide balanced international news, while RFE/RL’s Radio Farda helps audiences better understand Iran and the region in order to build a better life."
+		about: "VOA and RFE/RL target urban youth who are politically savvy and active online, providing platforms for free thought and debate not tolerated in the local media. VOA’s Persian Service works to fight misperceptions and stereotypes about the U.S. and provide balanced international news, while RFE/RL’s Radio Farda helps audiences better understand Iran and the region in order to build a better life.",
+		link: "/reporting-the-truth-in-iran/"		
 	},
 	russia: {
 		comprisedOf: ['Russia'],
 		influences: ['Ukraine','Estonia','Latvia','Lithuania','Belarus','Moldova','Syria','Kazakhstan','Uzbekistan','Turkmenistan','Tajikistan','Kyrgyzstan','Azerbaijan','Armenia','Georgia','Israel'],
 		color: colors['russia'],
 		label: "Russia",
-		about: "Freedom House has described Russia as an “innovator of modern state propaganda.” Indeed, the Kremlin tightly controls domestic news and runs massive misinformation campaigns targeting audiences along its periphery. In 2016, VOA and RFE/RL provided audiences in this area with credible, factual, and locally relevant journalism as alternatives to these lies and disinformation."
+		about: "Freedom House has described Russia as an “innovator of modern state propaganda.” Indeed, the Kremlin tightly controls domestic news and runs massive misinformation campaigns targeting audiences along its periphery. In 2016, VOA and RFE/RL provided audiences in this area with credible, factual, and locally relevant journalism as alternatives to these lies and disinformation.",
+		link: "/responding-to-misinformation-in-russia/"		
 	},
 	cuba: {
 		comprisedOf: ['Cuba'],
 		influences: ['Venezuela','Colombia'],
 		color: colors['cuba'],
 		label: "Cuba",
-		about: "Freedom House has long catalogued Cuba as the Western Hemisphere’s most restrictive environment for information and communication technologies, with one of the lowest internet penetration rates in the world. Despite improved relations with the U.S, sever media restrictions continue. The United Nations recently declared internet access as a basic human right; Cuba opposed the move."
+		about: "Freedom House has long catalogued Cuba as the Western Hemisphere’s most restrictive environment for information and communication technologies, with one of the lowest internet penetration rates in the world. Despite improved relations with the U.S, sever media restrictions continue. The United Nations recently declared internet access as a basic human right; Cuba opposed the move.",
+		link: "/supporting-human-rights-in-cuba/"		
 	},
 	ssa: {
 		comprisedOf: ['Angola','Benin','Botswana','Burkina Faso','Burundi','Cameroon','Cape Verde','Central African Republic','Chad','Republic of Congo','Democratic Republic of Congo','CÃ´te d\'Ivoire','Djibouti','Equatorial Guinea','Eritrea','Ethiopia','Gabon','Gambia','Ghana','Guinea','Guinea-Bissau','Kenya','Lesotho','Liberia','Madagascar','Malawi','Mali','Mauritania','Mauritius','Mozambique','Namibia','Niger','Nigeria','Réunion','Rwanda','Sao Tome and Principe','Senegal','Sierra Leone','Somalia','South Sudan','Sudan','Swaziland','Tanzania','Togo','Uganda','Western Sahara','Zambia','Zimbabwe'],
 		influences: [],
 		color: colors['ssa'],
 		label: "Sub-Saharan Africa",
-		about: "Although Sub-Saharan Africa was not explicitly named as one of the top five priorities, the work that BBG broadcasters do there is significant. According to Freedom House, 94% of countries in Sub-Saharan Africa have a Partly Free or Not Free media environment. VOA broadcasts in more than a dozen languages throughout the region, providing what is often the only source of unbiased news and information."
+		about: "Although Sub-Saharan Africa was not explicitly named as one of the top five priorities, the work that BBG broadcasters do there is significant. According to Freedom House, 94% of countries in Sub-Saharan Africa have a Partly Free or Not Free media environment. VOA broadcasts in more than a dozen languages throughout the region, providing what is often the only source of unbiased news and information.",
+		link: "/responding-to-unique-news-needs-in-africa/"		
 	},
 	cve: {
 		comprisedOf: ['Russia'],
@@ -82,7 +86,8 @@ var spheres = {
 		],
 		color: colors['cve'],
 		label: "Countering Violent Extremism",
-		about: "Extremist groups such as ISIS and Al Qaeda restrict access to information, instill fear and intimidation among local populations and propagate disinformation. For those living under their control, access to credible news and information is more important than ever. In 2016, BBG networks engaged youth and provided accurate and unbiased information in areas affected by violent extremism."
+		about: "Extremist groups such as ISIS and Al Qaeda restrict access to information, instill fear and intimidation among local populations and propagate disinformation. For those living under their control, access to credible news and information is more important than ever. In 2016, BBG networks engaged youth and provided accurate and unbiased information in areas affected by violent extremism.",
+		link: "/countering-violent-extremism/"		
 	},
 	china: {
 		comprisedOf: ['China'],
@@ -90,7 +95,8 @@ var spheres = {
 			'Bangladesh','Bhutan', 'Nepal', 'Thailand', 'Myanmar', 'Vietnam', 'Lao People\'s Democratic Republic', 'North Korea', 'South Korea', 'Cambodia', 'Malaysia'  ],
 		color: colors['china'],
 		label: "China",
-		about: "China has one of the world’s most restrictive media environments, with rampant censorship and internet restrictions. Voice of America and Radio Free Asia are a vital source of uncensored information throughout China, especially forbidden topics such as government corruption, religious freedom, political dissent, the crackdown on free speech, online censorship environmental pollution and human rights for Tibetans and ethnic Uyghurs."
+		about: "China has one of the world’s most restrictive media environments, with rampant censorship and internet restrictions. Voice of America and Radio Free Asia are a vital source of uncensored information throughout China, especially forbidden topics such as government corruption, religious freedom, political dissent, the crackdown on free speech, online censorship environmental pollution and human rights for Tibetans and ethnic Uyghurs.",
+		link: "/overcoming-censorship-in-china/"		
 	},
 };
 
@@ -178,6 +184,7 @@ function setActiveSphere(s) {
 	var newAboutText= '';
 	if (s != 'all') {
 		newAboutText = '<h2>' + spheres[s].label + '</h2>' + spheres[s].about;
+		newAboutText += "<BR><BR><span class='readMore'><a href='" + spheres[s].link + "'> >> Read More</a></span>";
 	}
 	jQuery('div.dynamicHotSpotText').html(newAboutText); 
 	var newAreas = getAreas(s);
@@ -246,23 +253,14 @@ function resetButtons(btnLeaveAlone) {
 		});
 
 		map.addListener("clickMapObject", function (event) {
-			var sphere= false;
-			console.log('activeSphere is ' + activeSphere);
-			//if we're in the 'all' view, take the most relevant sphere
-			if (activeSphere == "all") {
-				sphere = sMap[event.mapObject.id];
-			} else {
-			//else if our view is restricted to a sphere, use that
-				sphere = activeSphere;
-			}
-			//window.location = bbgConfig.template_directory_uri + "../../../hot-spots/" + sphere;
+			window.location = spheres[activeSphere].link;
 		});
 
 		map.balloonLabelFunction = function (area, map) {
 			var txt = "";
 			if (activeSphere != "all") {
 				//txt= spheres[activeSphere].label + " Sphere of Influence";
-				spheres[activeSphere].label;
+				txt = spheres[activeSphere].label;
 			} else {
 				var sphere = spheres[sMap[area.id]];
 		    	if (sphere) {
@@ -342,6 +340,7 @@ function resetButtons(btnLeaveAlone) {
 				var c = cMapByID[countryID];
 				var s = spheres[primarySphere];
 				var newAboutText = '<h2>' + s.label + '</h2>' + s.about;
+				newAboutText += "<BR><BR><span class='readmore'><a href='" + s.link + "'> >> Read More</a></span>";
 				jQuery('div.dynamicHotSpotText').html(newAboutText); 
 				
 				event.mapObject.color = s.color;
