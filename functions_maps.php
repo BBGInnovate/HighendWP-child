@@ -5,7 +5,8 @@ function ttpmap_func( $atts ) {
 	$freeNotFreeObj = array_map('str_getcsv', file(get_stylesheet_directory_uri() . '/data/freeNotFree.csv'));
 	if (count($freeNotFreeObj)) {
 
-		//remove the first row from the array because it's headers, not data
+		//remove the first two rows from the array because they're headers, not data
+		array_shift($freeNotFreeObj);
 		array_shift($freeNotFreeObj);
 	}
 	$freeNotFreeStr = json_encode(new ArrayValue($freeNotFreeObj), JSON_PRETTY_PRINT);
@@ -49,6 +50,7 @@ function ttpmap_func( $atts ) {
 			height: 50px;
 		}
 		.legendBox {
+			margin-top: 1em;
 			width: 15px;
 			height: 15px;
 			display:inline-block;

@@ -24,6 +24,8 @@ function getAreas() {
 		var countryName = o[1];
 		var freedomScore = o[2];
 		var freedomStatus = o[3];
+		var internetFreedomScore = o[6];
+		var internetFreedomStatus = o[7];
 		
 		if (bbgStatus != "Not targeted") {
 			if (cMap.hasOwnProperty(countryName.toLowerCase())) {
@@ -37,9 +39,14 @@ function getAreas() {
 					colorFill = COLOR_PARTIALLY_FREE;
 					freedomLabel = "Partially Free";
 				}
+				var title = "<div style='font-size:14px; font-weight:bold;'>" + countryName + "</div>" + freedomLabel + "<BR>Press Freedom: " + freedomScore + "/100";
+				if (internetFreedomScore != "") {
+					title += "<BR>Internet Freedom: " + internetFreedomScore + "/100";
+				}
+
 				var a = {
 					id: countryID,
-					title: "<div style='font-size:14px; font-weight:bold;'>" + countryName + "</div>" + freedomLabel + "<BR>" + freedomScore + "/100",
+					title: title,
 					color: colorFill,
 					alpha: 1
 				}
