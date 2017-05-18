@@ -1,3 +1,11 @@
+function isMobileDevice () {
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 var fullCountryList = AmCharts.maps.worldLow.svg.g.path;
 var activeSphere = "all";
 
@@ -134,8 +142,8 @@ function getAreas() {
 				outlineThickness: 0.1
 			},
 			zoomControl:  {
-				zoomControlEnabled: false,
-				panControlEnabled: false,
+				zoomControlEnabled: isMobileDevice(),
+				panControlEnabled: isMobileDevice(),
 				homeButtonEnabled: false
 			},
 			dragMap:false
