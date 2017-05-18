@@ -67,7 +67,7 @@ var spheres = {
 	},
 	ssa: {
 		comprisedOf: ['Angola','Benin','Botswana','Burkina Faso','Burundi','Cameroon','Cape Verde','Central African Republic','Chad','Republic of Congo','Democratic Republic of Congo','CÃ´te d\'Ivoire','Djibouti','Equatorial Guinea','Eritrea','Ethiopia','Gabon','Gambia','Ghana','Guinea','Guinea-Bissau','Kenya','Lesotho','Liberia','Madagascar','Malawi','Mali','Mauritania','Mauritius','Mozambique','Namibia','Niger','Nigeria','Réunion','Rwanda','Sao Tome and Principe','Senegal','Sierra Leone','Somalia','South Sudan','Sudan','Swaziland','Tanzania','Togo','Uganda','Western Sahara','Zambia','Zimbabwe'],
-		influences: ['Venezuela','Colombia'],
+		influences: [],
 		color: colors['ssa'],
 		label: "Sub-Saharan Africa",
 		about: "Although Sub-Saharan Africa was not explicitly named as one of the top five priorities, the work that BBG broadcasters do there is significant. According to Freedom House, 94% of countries in Sub-Saharan Africa have a Partly Free or Not Free media environment. VOA broadcasts in more than a dozen languages throughout the region, providing what is often the only source of unbiased news and information."
@@ -174,7 +174,7 @@ function getAreas(aSphere) {
 
 function setActiveSphere(s) {
 	activeSphere=s;
-	console.log('setActiveSphere ' + s);
+	//console.log('setActiveSphere ' + s);
 	var newAboutText= '';
 	if (s != 'all') {
 		newAboutText = '<h2>' + spheres[s].label + '</h2>' + spheres[s].about;
@@ -261,18 +261,20 @@ function resetButtons(btnLeaveAlone) {
 		map.balloonLabelFunction = function (area, map) {
 			var txt = "";
 			if (activeSphere != "all") {
-				txt= spheres[activeSphere].label + " Hot Spot";
+				//txt= spheres[activeSphere].label + " Sphere of Influence";
+				spheres[activeSphere].label;
 			} else {
 				var sphere = spheres[sMap[area.id]];
 		    	if (sphere) {
-		    		txt = sphere.label + " Hot Spot";
+		    		//txt = sphere.label + " Sphere of Influence";
+		    		txt = sphere.label;
 		    	}
 			}
 	    	return txt;
 	    };
 
 		map.addListener("rollOutMapObject", function (event) {
-			console.log("rollout active is " + activeSphere);
+			//console.log("rollout active is " + activeSphere);
 			if (activeSphere == "all") {
 				jQuery('div.dynamicHotSpotText').html(''); 
 			}
@@ -421,15 +423,14 @@ function resetButtons(btnLeaveAlone) {
 			setActiveSphere(val);
 			resetButtons();
 
-
 			jQuery(this).css('color',colors[val]);
 			jQuery(this).css('background-color',COLOR_ACTIVE);
 
 
 		});
 	    resetButtons();
-	    jQuery('.entity-buttons button.all').trigger( "click" );
-	    initMobileLegend();
+	    jQuery('.entity-buttons button.cve').trigger( "click" );
+	    //initMobileLegend();
 
 	});
 

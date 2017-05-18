@@ -253,33 +253,30 @@ function hotspotmap_func( $atts ) {
 	<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/ammap.js'></script>
 	<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/mapdata-worldLow.js'></script>
 	<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/map-hotspot.js'></script>
-
 	
 	<div class="btn-group entity-buttons u--show-medium-large" role="group" aria-label="..." style="clear: none;">
-		<button type="button" title="ALL" class=" btn-default all" value="all"><span class="bbg__map__button-text">ALL</span></button><!--
+		<button type="button" title="COUNTERING VIOLENT EXTREMISM" class=" btn-default cve" value="cve"><span class="bbg__map__button-text">CVE</span></button><!--
+		--><button type="button" title="RUSSIA" class=" btn-default russia" value="russia"><span class="bbg__map__button-text">RUSSIA</span></button><!--
+		--><button type="button" title="IRAN" class=" btn-default iran" value="iran"><span class="bbg__map__button-text">IRAN</span></button><!--
 		--><button type="button" title="CHINA" class=" btn-default china" value="china"><span class="bbg__map__button-text">CHINA</span></button><!--
 		--><button type="button" title="CUBA" class=" btn-default cuba" value="cuba"><span class="bbg__map__button-text">CUBA</span></button><!--
-		--><button type="button" title="IRAN" class=" btn-default iran" value="iran"><span class="bbg__map__button-text">IRAN</span></button><!--
-		--><button type="button" title="RUSSIA" class=" btn-default russia" value="russia"><span class="bbg__map__button-text">RUSSIA</span></button><!--
-		--><button type="button" title="COUNTERING VIOLENT EXTREMISM" class=" btn-default cve" value="cve"><span class="bbg__map__button-text">CVE</span></button><!--
-		--><button type="button" title="SUBSAHARAN AFRICA" class=" btn-default ssa" value="ssa"><span class="bbg__map__button-text">SUBSAHARAN AFRICA</span></button></div>
+		--><button type="button" title="SUBSAHARAN AFRICA" class=" btn-default ssa" value="ssa"><span class="bbg__map__button-text">SUB-SAHARAN AFRICA</span></button></div>
 	<div align="center" id="mapFilters" class="u--hide-medium-large">
 		<BR>
 		<select id="hotSpotPicker">
-			<option value="all">All</option>
-			<option value="china">China</option>
 			<option value="cve">CVE</option>
-			<option value="cuba">Cuba</option>
-			<option value="iran">Iran</option>
 			<option value="russia">Russia</option>
-			<option value="ssa">Subsaharan Africa</option>
+			<option value="iran">Iran</option>
+			<option value="china">China</option>
+			<option value="cuba">Cuba</option>
+			<option value="ssa">Sub-Saharan Africa</option>
 		</select>
 	</div>
 
 
 		<div id="chartdiv"></div>
 	<!-- <div style="margin-top:1rem;" class="u--show-medium-large"><em>Hover over a country to highlight other countries in its primary hot spot.  Use the buttons at the top to view hot spots one at a time.</em></div><BR> -->
-
+	<!--
 	<div align="left" class="u--hide-medium-large">
 		<div align="center" >
 			<div class="legendBox china"></div> China 
@@ -290,10 +287,7 @@ function hotspotmap_func( $atts ) {
 			<div class="legendBox ssa"></div> Subsaharan Africa
 		</div>
 	</div>
-
-
-
-
+	-->
 <?php 
 		$str = ob_get_clean();
 	    return $str;
