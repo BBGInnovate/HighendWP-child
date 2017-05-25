@@ -193,7 +193,7 @@ function setActiveSphere(s) {
 	var newAboutText= '';
 	if (s != 'all') {
 		newAboutText = '<h2>' + spheres[s].label + '</h2>' + spheres[s].about;
-		newAboutText += "<BR><BR><span class='readMore'><a href='" + spheres[s].link + "'> >> Read More</a></span>";
+		newAboutText += "<BR><BR><span class='readMore'><a href='" + spheres[s].link + "'> Read More »</a></span>";
 	}
 	jQuery('div.dynamicHotSpotText').html(newAboutText); 
 	var newAreas = getAreas(s);
