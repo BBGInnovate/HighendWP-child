@@ -39,8 +39,17 @@ var normalColors = {
 	all: "#999999",
 	ssa:"#836953"
 }
+var newColors = {
+	iran: "#b9bed3",
+	russia: "#235691",
+	china: "#1273ba",
+	cuba: "#323a46",
+	cve: "#971b1e",
+	//all: "#999999",
+	ssa:"#b9ccd3"
+}
 
-colors = normalColors;
+colors = newColors;
 
 //define each sphere an dthe countires it is comprised of and influences
 var spheres = {
@@ -62,7 +71,7 @@ var spheres = {
 	},
 	cuba: {
 		comprisedOf: ['Cuba'],
-		influences: ['Venezuela','Colombia'],
+		influences: ['Venezuela'],
 		color: colors['cuba'],
 		label: "Cuba",
 		about: "Freedom House has long catalogued Cuba as the Western Hemisphere’s most restrictive environment for information and communication technologies, with one of the lowest internet penetration rates in the world. Despite improved relations with the U.S, sever media restrictions continue. The United Nations recently declared internet access as a basic human right; Cuba opposed the move.",
