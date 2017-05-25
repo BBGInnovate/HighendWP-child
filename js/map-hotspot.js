@@ -349,7 +349,7 @@ function resetButtons(btnLeaveAlone) {
 				var c = cMapByID[countryID];
 				var s = spheres[primarySphere];
 				var newAboutText = '<h2>' + s.label + '</h2>' + s.about;
-				newAboutText += "<BR><BR><span class='readmore'><a href='" + s.link + "'> >> Read More</a></span>";
+				newAboutText += "<BR><BR><span class='readmore'><a href='" + s.link + "'> Read More »</a></span>";
 				jQuery('div.dynamicHotSpotText').html(newAboutText); 
 				
 				event.mapObject.color = s.color;
