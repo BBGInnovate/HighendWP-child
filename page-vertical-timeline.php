@@ -19,11 +19,11 @@ if ( vp_metabox('background_settings.hb_content_background_color') )
 	<div class="container">
 		<div class="row main-row">
 			<div id="page-<?php the_ID(); ?>" <?php post_class('col-12'); ?>>
-				<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>	<link rel="stylesheet" href="http://2016.bbg.gov/wp-content/themes/HighendWP-child/timeline/reset.css"> <!-- CSS reset -->
-				<link rel="stylesheet" href="http://2016.bbg.gov/wp-content/themes/HighendWP-child/timeline/style.css">
-				<script src="http://2016.bbg.gov/wp-content/themes/HighendWP-child/timeline/modernizr.js"></script>
-				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-				<script src="http://2016.bbg.gov/wp-content/themes/HighendWP-child/timeline/main.js"></script> <!-- Resource jQuery -->
+				<link href='//fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>	
+				<link rel="stylesheet" href="/wp-content/themes/HighendWP-child/timeline/style-trimmed.css">
+				<script src="/wp-content/themes/HighendWP-child/timeline/modernizr.js"></script>
+				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+				<script src="/wp-content/themes/HighendWP-child/timeline/main.js"></script> <!-- Resource jQuery -->
 
 				<?php 
 					the_content(); 
@@ -34,7 +34,7 @@ if ( vp_metabox('background_settings.hb_content_background_color') )
 						$thedate = get_sub_field('timeline_date');		
 						$title = get_sub_field('timeline_item_title');
 						$imgSrc = get_sub_field('timeline_icon');
-						$imgSrc = "http://2016.bbg.gov/wp-content/themes/HighendWP-child/timeline/cd-icon-picture.svg";
+						$imgSrc = "/wp-content/themes/HighendWP-child/timeline/cd-icon-picture.svg";
 						$href = get_sub_field('timeline_link');
 						$body = get_sub_field('timeline_html_content');
 				?>
@@ -43,7 +43,7 @@ if ( vp_metabox('background_settings.hb_content_background_color') )
 							<img src="<?php echo $imgSrc; ?>" alt="Picture">
 						</div>
 						<div class="cd-timeline-content">
-							<h2><?php echo $title; ?></h2><BR>
+							<h2><?php echo $title; ?></h2>
 							<?php echo $body; ?>
 							<a href="<?php echo $href; ?>" class="cd-read-more">Read more</a>
 							<span class="cd-date"><?php echo $thedate; ?></span>
