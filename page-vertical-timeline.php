@@ -13,7 +13,34 @@ Template Name: Vertical Timeline
 $main_content_style = "";
 if ( vp_metabox('background_settings.hb_content_background_color') )
 	$main_content_style = ' style="background-color: ' . vp_metabox('background_settings.hb_content_background_color') . ';"';
-?> 
+?>
+<style>
+.facebook-responsive {
+    overflow:hidden;
+    padding-bottom:68%;
+    position:relative;
+    height:0;
+}
+
+.facebook-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+iframe#superTuesday {
+
+}
+.facebook-responsive-aftermath  {
+	overflow:hidden;
+	padding-bottom:60%;
+	position:relative;
+	height:0;
+}
+
+</style>
 	<!-- BEGIN #main-content -->
 <div id="main-content"<?php echo $main_content_style; ?>>
 	<div class="container">
@@ -24,9 +51,10 @@ if ( vp_metabox('background_settings.hb_content_background_color') )
 				<script src="/wp-content/themes/HighendWP-child/timeline/modernizr.js"></script>
 				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 				<script src="/wp-content/themes/HighendWP-child/timeline/main.js"></script> <!-- Resource jQuery -->
-
+				<?php the_content(); ?>
+				<section id="cd-timeline" class="cd-container">
 				<?php 
-					the_content(); 
+					
 					
 					while( have_rows('timeline_items') ): 
 						the_row(); 
@@ -52,6 +80,7 @@ if ( vp_metabox('background_settings.hb_content_background_color') )
 				<?php 
 					endwhile;
 				?>
+				</section>
 			</div>
 		</div> <!-- END .row -->
 	</div> <!-- END .container -->
