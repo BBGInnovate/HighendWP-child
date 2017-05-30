@@ -69,14 +69,18 @@ function ttpmap_func( $atts ) {
 	<!-- HTML --> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<h2>Threats to Press</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non lacus velit. Proin porta ultricies ex non vulputate. Aenean maximus convallis varius. Invidual threats are mapped below with the <i class="fa fa-map-pin" aria-hidden="true"></i> icon and you may <a style="text-decoration: underline;" href="https://www.bbg.gov/2016-threats-archive/" target="_blank">view a full list</a> on the bbg.gov site.</p>
+
+	<p>
+	Press freedom—under attack by terrorist, government and criminal forces—has reached the lowest point in 12 years. The BBG operates in some of the most press-restrictive places in the world. Threats to BBG journalists in 2016 are mapped below with the <i class="fa fa-map-pin" aria-hidden="true"></i> icon. Full list of incidents is available <a style="text-decoration: underline;" href="https://www.bbg.gov/2016-threats-archive/" target="_blank">here</a>.
+	</p>
+
 	<div class="bbg__map-area__container " style="postion: relative;">
 		<div id="chartdiv"></div>
 		<div align="center" >
 			<div align="center" >
-				<div class="legendBox free"></div> Free 
-				<div class="legendBox partially-free"></div> Partially Free 
 				<div class="legendBox not-free"></div> Not Free 
+				<div class="legendBox partially-free"></div> Partially Free 
+				<div class="legendBox free"></div> Free 
 				&nbsp;&nbsp;<span style="white-space: nowrap;"><i class="fa fa-map-pin" aria-hidden="true"></i> Incident</span>
 			</div>
 		</div>
