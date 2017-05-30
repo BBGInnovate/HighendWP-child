@@ -29,6 +29,8 @@ function highend_child_theme_enqueue_styles() {
 	    wp_enqueue_script('home-script', get_stylesheet_directory_uri().'/home_scripts.js');
 	}
 
+	wp_enqueue_style( 'selector-css', get_template_directory_uri() . '/js/vendor/selection-sharer.css' );
+	wp_enqueue_script( 'selector-script', get_stylesheet_directory_uri() . '/js/vendor/selection-sharer.js' );
 	
 }
 add_action( 'wp_enqueue_scripts', 'highend_child_theme_enqueue_styles' );
