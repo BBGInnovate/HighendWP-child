@@ -6,9 +6,42 @@
  Author URI:   http://www.hb-themes.com
  Template:     HighendWP
  Version:      1.0.1
- Tags:		   Responsive, Page-Builder, Drag&Drop, Clean, Modern, Corporate, Multi-Purpose, Multi-Color
+ Tags:		   Responsive, Page-Builder, Drag&Drop, ClXean, Modern, Corporate, Multi-Purpose, Multi-Color
  Text Domain:  hbthemes
 */
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
+a { color: #205493; text-decoration: underline;}
+a:visited { color: #4773AA; text-decoration: none;}
+
+@media (max-width: 767px) {
+  .mobileOnly {
+    display: inherit !important;
+  }
+  .desktopOnly {
+  	display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .mobileOnly {
+    display: none !important;
+  }
+  .desktopOnly {
+  	display: inherit !important;
+  }
+}
+.spotlightSection {
+  color:#EEE;
+  font-family: "Lato","Helvetica","Arial",sans-serif;
+  /*font-size: 25px; */
+  font-size:1.4em;
+  line-height: 1.45;
+  background-color: #323a45 !important;
+  padding:35px !important;
+}
+.spotlightSection a { 
+  color: #9bdaf1 !important; 
+}
+
