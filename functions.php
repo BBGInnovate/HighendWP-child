@@ -24,12 +24,13 @@ function highend_child_theme_enqueue_styles() {
 
 	if (is_front_page()) {
 		wp_enqueue_style( 'home-style',
-	        get_stylesheet_directory_uri() . '/home_styles.css'
+	        get_stylesheet_directory_uri() . '/css/home_styles.css'
 	    );
-	    wp_enqueue_script('home-script', get_stylesheet_directory_uri().'/home_scripts.js');
+	    wp_enqueue_script('home-script', get_stylesheet_directory_uri().'/js/home_scripts.js');
 	}
+	wp_enqueue_script('global_script', get_stylesheet_directory_uri().'/js/global_scripts.js');
 
-	wp_enqueue_style( 'selector-css', get_template_directory_uri() . '/js/vendor/selection-sharer.css' );
+	wp_enqueue_style( 'selector-css', get_stylesheet_directory_uri() . '/js/vendor/selection-sharer.css' );
 	wp_enqueue_script( 'selector-script', get_stylesheet_directory_uri() . '/js/vendor/selection-sharer.js' );
 	
 }
