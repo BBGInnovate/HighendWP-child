@@ -29,6 +29,11 @@ jQuery( document ).ready(function() {
 	}
 	setInterval(fakeWindowResize, 1500); 
 
+	function showButton() {
+		jQuery('#btnPlay').addClass('importantVisible');
+	}
+	setTimeout(showButton,2000);
+
 	jQuery(document).on('pumBeforeOpen', '.pum', function () {
 		var $iframe = jQuery('iframe', jQuery(this));
 			if ("undefined" === typeof window.popSrc) {
@@ -40,4 +45,4 @@ jQuery( document ).ready(function() {
 			//$iframe.prop('src', '').prop('src', window.popSrc);
 		});
 		
-});
+}); 

@@ -6,7 +6,7 @@
  Author URI:   http://www.hb-themes.com
  Template:     HighendWP
  Version:      1.0.1
- Tags:		   Responsive, Page-Builder, Drag&Drop, ClXean, Modern, Corporate, Multi-Purpose, Multi-Color
+ Tags:       Responsive, Page-Builder, Drag&Drop, ClXean, Modern, Corporate, Multi-Purpose, Multi-Color
  Text Domain:  hbthemes
 */
 
@@ -21,7 +21,7 @@ a:visited { color: #4773AA; text-decoration: none;}
     display: inherit !important;
   }
   .desktopOnly {
-  	display: none !important;
+    display: none !important;
   }
 }
 @media (min-width: 768px) {
@@ -29,7 +29,7 @@ a:visited { color: #4773AA; text-decoration: none;}
     display: none !important;
   }
   .desktopOnly {
-  	display: inherit !important;
+    display: inherit !important;
   }
 }
 .spotlightSection {
@@ -44,4 +44,26 @@ a:visited { color: #4773AA; text-decoration: none;}
 .spotlightSection a { 
   color: #9bdaf1 !important; 
 }
-
+.fullscreenvideo video {
+  /* background: #062843 !important; */
+  /*background: #1273ba !important; */
+  background: #062843 !important;
+}
+.importantVisible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+/*
+#btnPlay {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+*/
+/* 2048 1078 */
+/*
+.breadcrumbs-wrapper {
+  left: 50px !important;
+  top: 115% !important;
+  display: block !important;
+}
+*/
