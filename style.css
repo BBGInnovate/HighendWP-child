@@ -15,7 +15,11 @@
 
 a { color: #205493; text-decoration: underline;}
 a:visited { color: #4773AA; text-decoration: none;}
-
+.footer-row a { text-decoration: none; }
+.footer-row a:hover { text-decoration: underline; }
+span.hb-light-logo.hb-logo-wrap {
+    display: none !important;
+}
 @media (max-width: 767px) {
   .mobileOnly {
     display: inherit !important;

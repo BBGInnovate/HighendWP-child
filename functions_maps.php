@@ -68,11 +68,6 @@ function ttpmap_func( $atts ) {
 
 	<!-- HTML --> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<h2>Threats to Press</h2>
-
-	<p>
-	Press freedom—under attack by terrorist, government and criminal forces—has reached the lowest point in 12 years. The BBG operates in some of the most press-restrictive places in the world. Threats to BBG journalists in 2016 are mapped below with the <i class="fa fa-map-pin" aria-hidden="true"></i> icon. Full list of incidents is available <a style="text-decoration: underline;" href="https://www.bbg.gov/2016-threats-archive/" target="_blank">here</a>.
-	</p>
 
 	<div class="bbg__map-area__container " style="postion: relative;">
 		<div id="chartdiv"></div>
