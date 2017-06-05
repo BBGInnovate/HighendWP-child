@@ -57,6 +57,9 @@ span.hb-light-logo.hb-logo-wrap {
   visibility: visible !important;
   opacity: 1 !important;
 }
+#languageListRow ul {
+  padding-left: 20px !important;  
+}
 /*
 #btnPlay {
   visibility: visible !important;
