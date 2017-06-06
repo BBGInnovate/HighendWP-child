@@ -341,7 +341,9 @@ Main components
     animation: cd-bounce-2 0.6s;
   }
 }
-
+.cd-timeline-content.center::before {
+  border:0px;
+}
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
   .cssanimations .cd-timeline-block.right-side .cd-timeline-content.bounce-in {
