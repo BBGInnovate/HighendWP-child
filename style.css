@@ -88,7 +88,9 @@ span.hb-light-logo.hb-logo-wrap {
 	background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3));
 	/*background-size: cover;*/
 }
-
+.team-member-name {
+	font-family: "Lato", sans-serif !important;
+}
 
 /*
 #btnPlay {
