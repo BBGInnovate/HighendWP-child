@@ -59,21 +59,29 @@ iframe#superTuesday {
 					while( have_rows('timeline_items') ): 
 						the_row(); 
 						//$imgSrc = "http://2016.bbg.gov/wp-content/themes/HighendWP-child/timeline/cd-icon-picture.svg";
-						$thedate = get_sub_field('timeline_date');		
-						$title = get_sub_field('timeline_item_title');
-						$imgSrc = get_sub_field('timeline_icon');
+						$thedate = get_sub_field( 'timeline_date' );		
+						$title = get_sub_field( 'timeline_item_title' );
+						$imgSrc = get_sub_field( 'timeline_icon' );
 						$imgSrc = "/wp-content/themes/HighendWP-child/timeline/cd-icon-picture.svg";
-						$href = get_sub_field('timeline_link');
-						$body = get_sub_field('timeline_html_content');
+						$href = get_sub_field( 'timeline_link' );
+						$body = get_sub_field( 'timeline_html_content' );
+						$side = get_sub_field( 'timeline_item_side' );
+						if ( $side == "right" ) {
+							$side = "right-side";
+						}
 				?>
-					<div class="cd-timeline-block">
+					<div class="cd-timeline-block <?php echo $side; ?>">
 						<div class="cd-timeline-img cd-picture">
 							<img src="<?php echo $imgSrc; ?>" alt="Picture">
 						</div>
 						<div class="cd-timeline-content">
 							<h2><?php echo $title; ?></h2>
 							<?php echo $body; ?>
-							<a href="<?php echo $href; ?>" class="cd-read-more">Read more</a>
+							<?php 
+								if ( $href != "" ) {
+									echo '<a href="' . $href . '" class="cd-read-more">Read more</a>';
+								}
+							?>
 							<span class="cd-date"><?php echo $thedate; ?></span>
 						</div> <!-- cd-timeline-content -->
 					</div>
