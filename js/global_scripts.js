@@ -23,6 +23,7 @@ jQuery( document ).ready(function() {
 		}
 	);
 	jQuery('#circleTooltip').hide() //.addClass('hb-testimonial');
+	jQuery("ul.filter-tabs li a[data-filter='.awards']").hide();
 });
 
 
