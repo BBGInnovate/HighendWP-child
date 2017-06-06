@@ -66,15 +66,18 @@ iframe#superTuesday {
 						$href = get_sub_field( 'timeline_link' );
 						$body = get_sub_field( 'timeline_html_content' );
 						$side = get_sub_field( 'timeline_item_side' );
-						if ( $side == "right" ) {
-							$side = "right-side";
-						}
+						if ( $side == "right" || $side == "left" ) {
+							$side .= "-side";
+						} 
 				?>
 					<div class="cd-timeline-block <?php echo $side; ?>">
+						<?php if ( $side != "center" ): ?>
 						<div class="cd-timeline-img cd-picture">
 							<img src="<?php echo $imgSrc; ?>" alt="Picture">
 						</div>
-						<div class="cd-timeline-content">
+						<?php endif; ?>
+
+						<div class="cd-timeline-content <?php echo $side; ?>">
 							<h2><?php echo $title; ?></h2>
 							<?php echo $body; ?>
 							<?php 
@@ -82,7 +85,9 @@ iframe#superTuesday {
 									echo '<a href="' . $href . '" class="cd-read-more">Read more</a>';
 								}
 							?>
+							<?php if ( $side != "center" ): ?>
 							<span class="cd-date"><?php echo $thedate; ?></span>
+							<?php endif; ?>
 						</div> <!-- cd-timeline-content -->
 					</div>
 				<?php 
