@@ -14,7 +14,8 @@ jQuery( document ).ready(function() {
     jQuery("path[class$='_circle'],g[class$='_circle']").css('cursor','pointer'); 			
 	jQuery("path[class$='_circle'],g[class$='_circle']").hover( 
 		function(e) {
-			var entity = jQuery(this).attr('class').split("_").shift();
+			var entity = jQuery(this).attr('class').split("_").shift().split(" ");
+			entity = entity[1];
 			toggleCircleDiv(entity,'in');
 		},
 		function(e) {
