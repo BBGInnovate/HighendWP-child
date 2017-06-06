@@ -10,63 +10,97 @@
  Text Domain:  hbthemes
 */
 
+
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
-a { color: #205493; text-decoration: underline;}
-a:visited { color: #4773AA; text-decoration: none;}
-.footer-row a { text-decoration: none; }
-.footer-row a:hover { text-decoration: underline; }
+a {
+	color: #205493;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #4773AA;
+	text-decoration: none;
+}
+
+.footer-row a {
+	text-decoration: none;
+}
+
+.footer-row a:hover {
+	text-decoration: underline;
+}
+
 span.hb-light-logo.hb-logo-wrap {
-    display: none !important;
+	display: none !important;
 }
+
 @media (max-width: 767px) {
-  .mobileOnly {
-    display: inherit !important;
-  }
-  .desktopOnly {
-    display: none !important;
-  }
+	.mobileOnly {
+		display: inherit !important;
+	}
+	.desktopOnly {
+		display: none !important;
+	}
 }
+
 @media (min-width: 768px) {
-  .mobileOnly {
-    display: none !important;
-  }
-  .desktopOnly {
-    display: inherit !important;
-  }
+	.mobileOnly {
+		display: none !important;
+	}
+	.desktopOnly {
+		display: inherit !important;
+	}
 }
+
 .spotlightSection {
-  color:#EEE;
-  font-family: "Lato","Helvetica","Arial",sans-serif;
-  /*font-size: 25px; */
-  font-size:1.4em;
-  line-height: 1.45;
-  background-color: #102f53 !important;
-  padding:35px !important;
+	color: #EEE;
+	font-family: "Lato", "Helvetica", "Arial", sans-serif;
+	/*font-size: 25px; */
+	font-size: 1.4em;
+	line-height: 1.45;
+	background-color: #102f53 !important;
+	padding: 35px !important;
 }
-.spotlightSection a { 
-  color: #9bdaf1 !important; 
+
+.spotlightSection a {
+	color: #9bdaf1 !important;
 }
+
 .fullscreenvideo video {
-  /* background: #062843 !important; */
-  /*background: #1273ba !important; */
-  background: #062843 !important;
+	/* background: #062843 !important; */
+	/*background: #1273ba !important; */
+	background: #062843 !important;
 }
+
 .importantVisible {
-  visibility: visible !important;
-  opacity: 1 !important;
+	visibility: visible !important;
+	opacity: 1 !important;
 }
+
 #languageListRow ul {
-  padding-left: 20px !important;  
+	padding-left: 20px !important;
 }
+
+.backgroundGradient {
+	/*min-height:100%;*/
+	background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3));
+	/*background-size: cover;*/
+}
+
+
 /*
 #btnPlay {
   visibility: visible !important;
   opacity: 1 !important;
 }
 */
+
+
 /* 2048 1078 */
+
+
 /*
 .breadcrumbs-wrapper {
   left: 50px !important;
