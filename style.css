@@ -74,3 +74,24 @@ span.hb-light-logo.hb-logo-wrap {
   display: block !important;
 }
 */
+div[id^='circleTooltip_'] {
+  padding: 20px;
+  border: 1px solid #EBEBEB;
+  position: relative;
+  color:#FFF;
+}
+#circleTooltip_voa {
+  background: #538EBD;
+}
+#circleTooltip_rfa {
+  background: #2D655E;
+}
+#circleTooltip_mbn {
+  background: #7E3536;
+}
+#circleTooltip_ocb {
+  background: #92AECF;
+}
+#circleTooltip_rferl {
+  background: #887639;
+}
