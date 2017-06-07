@@ -61,14 +61,25 @@ iframe#superTuesday {
 						//$imgSrc = "http://2016.bbg.gov/wp-content/themes/HighendWP-child/timeline/cd-icon-picture.svg";
 						$thedate = get_sub_field( 'timeline_date' );		
 						$title = get_sub_field( 'timeline_item_title' );
-						$imgSrc = get_sub_field( 'timeline_icon' );
-						$imgSrc = "/wp-content/themes/HighendWP-child/timeline/cd-icon-picture.svg";
+						
 						$href = get_sub_field( 'timeline_link' );
 						$body = get_sub_field( 'timeline_html_content' );
 						$side = get_sub_field( 'timeline_item_side' );
 						if ( $side == "right" || $side == "left" ) {
 							$side .= "-side";
-						} 
+						}
+						
+						//$imgSrc = "/wp-content/themes/HighendWP-child/timeline/cd-icon-picture.svg";
+						$imgSrc = get_stylesheet_directory_uri() . "/timeline/";
+
+						$icon = get_sub_field( 'timeline_icon' ); 
+						if ( $icon == "map pin" ) {
+							$imgSrc .= "cd-icon-location.svg";
+						} else if ( $icon == "camera" ) {
+							$imgSrc .= "cd-icon-movie.svg";
+						} else if ( $icon == "mountain" ) {
+							$imgSrc .= "cd-icon-picture.svg"; 
+						}
 				?>
 					<div class="cd-timeline-block <?php echo $side; ?>">
 						<?php if ( $side != "center" ): ?>
