@@ -14,6 +14,7 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+/*** STANDARD LINK STYLES ***/
 a {
 	color: #205493;
 	text-decoration: underline;
@@ -24,6 +25,7 @@ a:visited {
 	text-decoration: none;
 }
 
+/*** FOOTER LINK STYLES ***/
 .footer-row a {
 	text-decoration: none;
 }
@@ -32,10 +34,12 @@ a:visited {
 	text-decoration: underline;
 }
 
+/*** In Safari, a very small line was showing in the logo ***/
 span.hb-light-logo.hb-logo-wrap {
 	display: none !important;
 }
 
+/*** Throughout the site we have occasional need for utility classes for mobile/desktop only ***/
 @media (max-width: 767px) {
 	.mobileOnly {
 		display: inherit !important;
@@ -53,7 +57,13 @@ span.hb-light-logo.hb-logo-wrap {
 		display: inherit !important;
 	}
 }
+/*** utility class for use when something must be visible ***/
+.importantVisible {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
 
+/*** We have 'spotlight' sections throughout the site that invert to a dark background with lite text ***/
 .spotlightSection {
 	color: #EEE;
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
@@ -74,23 +84,24 @@ span.hb-light-logo.hb-logo-wrap {
 	background: #062843 !important;
 }
 
-.importantVisible {
-	visibility: visible !important;
-	opacity: 1 !important;
-}
-
+/* the networks page has a list of languages, and the bullets need to be indented on that particualr list **/
 #languageListRow ul {
 	padding-left: 20px !important;
 }
+
 
 .backgroundGradient {
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
 }
+
+/* the font used on team member listings - which includes the Board Members and the ICC members AKA network leadership - is not customizable via the normal user interface, so we do it here  **/
 .team-member-name {
 	font-family: "Lato", sans-serif !important;
 }
+
+/* the /board page shows a list of board members. We use CSS to hide some things we don't want showing and to dampen the effect of the opacity change ***/
 .team-member-img img:hover {
 	opacity: .65 !important; 
 } 
@@ -99,26 +110,17 @@ div.team-member-box.tmb-2 div.team-member-content {
 }
 div.team-member-box.tmb-2 div.team-member-description a.simple-read-more {
 	display: none;
-}  
-/*
-#btnPlay {
-  visibility: visible !important;
-  opacity: 1 !important;
 }
-*/
 
-
-/* 2048 1078 */
-
-
-/*
-.breadcrumbs-wrapper {
-  left: 50px !important;
-  top: 115% !important;
-  display: block !important;
+/* the hamburger mobile menu was including an extra underline if we didn't add this  ***/
+a#show-nav-menu {
+	text-decoration: none;
 }
-*/
-/*
+
+
+/
+/*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We 
+are no longer coloring them so I'm removing the styles for now 
 div[id^='circleTooltip_'] {
   padding: 20px;
   border: 1px solid #EBEBEB;
