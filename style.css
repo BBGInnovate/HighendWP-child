@@ -94,6 +94,12 @@ span.hb-light-logo.hb-logo-wrap {
 .team-member-img img:hover {
 	opacity: .65 !important; 
 } 
+div.team-member-box.tmb-2 div.team-member-content {
+	display:none;
+}
+div.team-member-box.tmb-2 div.team-member-description a.simple-read-more {
+	display: none;
+}  
 /*
 #btnPlay {
   visibility: visible !important;
