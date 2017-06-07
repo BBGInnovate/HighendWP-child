@@ -115,6 +115,7 @@ div.team-member-box.tmb-2 div.team-member-description a.simple-read-more {
 /* the hamburger mobile menu was including an extra underline if we didn't add this  ***/
 a#show-nav-menu {
 	text-decoration: none;
+	color:black;
 }
 
 
