@@ -7,6 +7,14 @@ function toggleCircleDiv(entity, direction) {
 		jQuery('#circleTooltip').show();
 	}
 }
+function isMobileDevice () {
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 
 jQuery( document ).ready(function() {
 
@@ -20,6 +28,9 @@ jQuery( document ).ready(function() {
 			var entity = jQuery(this).attr('class').split("_").shift().split(" ");
 			entity = entity[1];
 			toggleCircleDiv(entity,'in');
+			if ( isMobileDevice() ) {
+				jQuery("html, body").animate({ scrollTop:  jQuery('#circleTooltip').offset().top - jQuery('#header-inner-bg').height() }, 750);
+			}
 		},
 		function(e) {
 			toggleCircleDiv('','out');
