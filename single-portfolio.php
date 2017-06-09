@@ -109,9 +109,9 @@
 									<?php
 
 									if (has_term('awards','portfolio_categories', get_the_ID())) {
-										echo "<div style='text-align:right'><h3><a href='#'>&laquo; View All Awards</a></h3></div>";
+										echo "<div style='text-align:right'><h3><a href='/awards#awardsPortfolioSection'>&laquo; View All Awards</a></h3></div>";
 									} elseif  (has_term('impact-stories','portfolio_categories', get_the_ID())) {
-										echo "<div style='text-align:right'><h3><a href='#'>&laquo; View All Impact Stories</a></h3></div>";
+										echo "<div style='text-align:right'><h3><a href='/impact#impactPortfolioSection'>&laquo; View All Impact Stories</a></h3></div>";
 									}
 
 
