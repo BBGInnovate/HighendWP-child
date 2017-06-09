@@ -118,6 +118,9 @@ a#show-nav-menu {
 	color:black;
 }
 
+.portfolio-template-default .fw-image {
+	width:100% !important;
+}
 
 /
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We 
