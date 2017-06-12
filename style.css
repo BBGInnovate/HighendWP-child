@@ -143,18 +143,18 @@ ul.bbg__article-share li {
 	margin-right: 3px;
 }
 
-a.bbg__article-share__link.hb-moon-facebook-2 {
-	color: #3d5a98;
-}
-
-a.bbg__article-share__link.hb-moon-twitter-2 {
-	color: #55acee;
-}
-
 a.bbg__article-share__link:focus,
 a.bbg__article-share__link:hover {
 	color: #ccc;
 	text-decoration: none;
+}
+
+a.bbg__article-share__link .hb-moon-facebook-2 {
+	color: #3d5a98;
+}
+
+a.bbg__article-share__link .hb-moon-twitter-2 {
+	color: #55acee;
 }
 
 
