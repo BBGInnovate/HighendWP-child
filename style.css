@@ -124,14 +124,11 @@ a#show-nav-menu {
 
 
 /** Updates to the share section */
-/*a:focus .bbg__article-share__icon {
-	background-color: #757575;
-}*/
-
 .share-holder {
+	cursor: pointer;
 	display: block;
 	margin-top: 13px;
-	cursor: pointer;
+	text-align: left;
 }
 
 ul.bbg__article-share {
@@ -149,6 +146,7 @@ li.bbg__article-share__link {
 
 li.bbg__article-share__link a:hover,
 li.bbg__article-share__link a:focus {
+	background-color: #757575;
 	color: #ccc;
 	text-decoration: none;
 }
