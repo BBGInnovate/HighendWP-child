@@ -1,4 +1,4 @@
-/*
+
  Theme Name:   Highend Child
  Theme URI:    http://preview.hb-themes.com/?theme=Highend
  Description:  A Flexible, Powerful & Beautiful WordPress Theme by HB-Themes. Mobile ready and optimized for best performance. With the powerful engine and user friendly interface it will allow you to build outstanding websites quick and easy... It comes with Premium Plugins integrated into the theme.
@@ -103,8 +103,8 @@ span.hb-light-logo.hb-logo-wrap {
 
 /* the /board page shows a list of board members. We use CSS to hide some things we don't want showing and to dampen the effect of the opacity change ***/
 .team-member-img img:hover {
-	opacity: .65 !important; 
-} 
+	opacity: .65 !important;
+}
 div.team-member-box.tmb-2 div.team-member-content {
 	display:none;
 }
@@ -115,16 +115,142 @@ div.team-member-box.tmb-2 div.team-member-description a.simple-read-more {
 /* the hamburger mobile menu was including an extra underline if we didn't add this  ***/
 a#show-nav-menu {
 	text-decoration: none;
-	color:black;
+	color: black;
 }
 
 .portfolio-template-default .fw-image {
-	width:100% !important;
+	width: 100% !important;
 }
 
-/
-/*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We 
-are no longer coloring them so I'm removing the styles for now 
+
+/** Updates to the share section */
+a:focus .bbg__article-share__icon {
+	background-color: #757575;
+}
+
+.bbg__article-share {
+	border: none;
+	margin: {
+		top: 0;
+		bottom: 1rem;
+	}
+
+
+
+	/*@include media ($medium-screen) {
+		margin: {
+			top: 0;
+			bottom: 0;
+		}
+	}
+	@include media($medium-large-screen) {
+		float: none;
+		margin: {
+			top: -1%;
+			right: auto;
+			left: auto;
+		}
+		/* Added to overwrite the existing margin-top applied to all UL tags by USDS :: GIGI */
+	/*}
+}
+/*
+.bbg__article-sidebar {
+	.bbg__article-share {
+		@include media($medium-large-screen) {
+			margin-left: initial;
+		}
+	}
+}*/
+
+/* Article share links */
+.bbg__article-share__link {
+	display: inline-block;
+	margin-right: 3px;
+}
+
+.bbg__article-share__link a:hover {
+	background: none;
+	text-decoration: none;
+}
+
+.bbg__article-share__link a:focus {
+	background: none;
+	text-decoration: none;
+}
+
+.bbg__article-share__link:before {
+	content: "";
+}
+
+
+/* Article share links: icons */
+.bbg__article-share__icon {
+	background-color: #f1f1f1;
+	display: inline-block;
+	height: 40px;
+	margin-right: .5rem;
+	vertical-align: middle;
+	width: 40px;
+}
+
+/*.bbg__contact__icon.email,
+.bbg__article-share__icon.email {
+	background: {
+		color: $color-gray-medium;
+		image: url(img/social-icons/png-white/social-icons_email.png);
+	}
+}
+
+.bbg__contact__icon.facebook,
+.bbg__article-share__icon.facebook {
+	background: {
+		color: $color-share-facebook;
+		image: url(img/social-icons/png-white/social-icons_facebook.png);
+	}
+}
+
+.bbg__contact__icon.twitter,
+.bbg__article-share__icon.twitter {
+	background: {
+		color: $color-share-twitter;
+		image: url(img/social-icons/png-white/social-icons_twitter.png);
+	}
+}
+
+.bbg__contact__icon.phone,
+.bbg__article-share__icon.phone {
+	background: {
+		color: $color-share-facebook;
+		image: url(img/social-icons/png-white/social-icons_phone.png);
+	}
+}
+
+.bbg__contact__icon.instagram,
+.bbg__article-share__icon.instagram {
+	background: {
+		color: $color-share-instagram;
+		image: url(img/social-icons/png-white/social-icons_instagram.png);
+	}
+}*/
+
+
+/* Article share links: text */
+.bbg__article-share__text {
+	display: none;
+	&:hover,
+	&:focus {
+		background: none;
+		text-decoration: underline;
+	}
+	@include media($medium-screen) {
+		display: inline-block;
+	}
+}
+
+
+
+/*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
+are no longer coloring them so I'm removing the styles for now
 div[id^='circleTooltip_'] {
   padding: 20px;
   border: 1px solid #EBEBEB;
@@ -146,4 +272,3 @@ div[id^='circleTooltip_'] {
 #circleTooltip_rferl {
   background: #887639;
 }
-*/
