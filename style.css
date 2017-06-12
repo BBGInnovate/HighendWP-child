@@ -137,35 +137,24 @@ ul.bbg__article-share {
 	margin-bottom: 1rem;
 }
 
-li.bbg__article-share__link {
+ul.bbg__article-share li {
 	display: inline-block;
 	font-size: 40px;
 	margin-right: 3px;
 }
 
-li.bbg__article-share__link a:focus,
-li.bbg__article-share__link a:hover {
-	color: #ccc;
-	text-decoration: none;
-}
-
-li.bbg__article-share__link a .hb-moon-facebook-2 {
+a.bbg__article-share__link.hb-moon-facebook-2 {
 	color: #3d5a98;
 }
 
-li.bbg__article-share__link a .hb-moon-twitter-2 {
+a.bbg__article-share__link.hb-moon-twitter-2 {
 	color: #55acee;
 }
 
-
-/* Article share links: icons */
-.bbg__article-share__icon {
-	background-color: #fff;
-	display: inline-block;
-	height: 40px;
-	margin-right: .5rem;
-	vertical-align: middle;
-	width: 40px;
+a.bbg__article-share__link:focus,
+a.bbg__article-share__link:hover {
+	color: #ccc;
+	text-decoration: none;
 }
 
 

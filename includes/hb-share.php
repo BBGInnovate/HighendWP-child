@@ -20,13 +20,13 @@ $hideFeaturedImage = FALSE;
 
 	<h4>Share</h4>
 	<ul class="bbg__article-share">
-		<li class="bbg__article-share__link facebook">
-			<a href="<?php echo $fbUrl; ?>">
-				<span class="bbg__article-share__icon hb-moon-facebook-2"></span>
+		<li>
+			<a class="bbg__article-share__link facebook" href="<?php echo $fbUrl; ?>">
+				<span class="hb-moon-facebook-2"></span>
 			</a>
 		</li>
-		<li class="bbg__article-share__link twitter">
-			<a href="<?php echo $twitterURL; ?>">
+		<li>
+			<a class="bbg__article-share__link twitter" href="<?php echo $twitterURL; ?>">
 				<span class="hb-moon-twitter-2"></span>
 			</a>
 		</li>
