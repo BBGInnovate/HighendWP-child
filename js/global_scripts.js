@@ -3,7 +3,7 @@ function toggleCircleDiv(entity, direction) {
 		jQuery('#circleTooltip').hide();
 	} else {
 		jQuery("div[id^='circleTooltip_']").hide();
-		jQuery('#circleTooltip_'+entity).show();	
+		jQuery('#circleTooltip_'+entity).show();
 		jQuery('#circleTooltip').show();
 	}
 }
@@ -23,8 +23,8 @@ jQuery( document ).ready(function() {
     jQuery('p,h4,h1,h2,h3').selectionSharer();
 
     // add interactivity to the circular svg on the networks page
-    jQuery("path[class$='_circle'],g[class$='_circle']").css('cursor','pointer'); 			
-	jQuery("path[class$='_circle'],g[class$='_circle']").hover( 
+    jQuery("path[class$='_circle'],g[class$='_circle']").css('cursor','pointer');
+	jQuery("path[class$='_circle'],g[class$='_circle']").hover(
 		function(e) {
 			var entity = jQuery(this).attr('class').split("_").shift().split(" ");
 			entity = entity[1];
@@ -37,7 +37,7 @@ jQuery( document ).ready(function() {
 			toggleCircleDiv('','out');
 		}
 	);
-	jQuery('#circleTooltip').hide() 
+	jQuery('#circleTooltip').hide()
 
 	//hide the 'Awards' item in the list of category filters, since there is already an 'all' button
 	jQuery("ul.filter-tabs li a[data-filter='.awards']").hide();
@@ -54,7 +54,7 @@ jQuery( document ).ready(function() {
     };
 
     // add handler links
-    var shareLink = document.querySelectorAll('li.bbg__article-share__link a');
+    var shareLink = document.querySelectorAll('li a.bbg__article-share__link');
     for (var a = 0; a < shareLink.length; a++) {
         shareLink[a].onclick = PopupHandler;
     }
