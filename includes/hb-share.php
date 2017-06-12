@@ -27,7 +27,7 @@ $hideFeaturedImage = FALSE;
 		</li>
 		<li class="bbg__article-share__link twitter">
 			<a href="<?php echo $twitterURL; ?>">
-				<span class="bbg__article-share__icon hb-moon-twitter-2"></span>
+				<span class="hb-moon-twitter-2"></span>
 			</a>
 		</li>
 	</ul>

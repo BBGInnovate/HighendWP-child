@@ -137,16 +137,15 @@ ul.bbg__article-share {
 	margin-bottom: 1rem;
 }
 
-li.bbg__article-share__link,
-li.bbg__article-share__link:hover,
-li.bbg__article-share__link:focus {
-	color: #ccc;
+li.bbg__article-share__link {
 	display: inline-block;
-	font-size: 50px;
+	font-size: 40px;
 	margin-right: 3px;
 }
 
+li.bbg__article-share__link a:focus,
 li.bbg__article-share__link a:hover {
+	color: #ccc;
 	text-decoration: none;
 }
 
