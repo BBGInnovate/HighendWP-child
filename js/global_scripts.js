@@ -59,6 +59,24 @@ jQuery( document ).ready(function() {
         shareLink[a].onclick = PopupHandler;
     }
 
+    
+    urlParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results==null){
+        return null;
+        }else{
+        return results[1] || 0;
+        }   
+    }
+
+    var awardFilter = urlParam( 'awardFilter' ); 
+    if (awardFilter) {
+        var selector = "a[data-filter='." + awardFilter + "']";
+        setTimeout(function() {
+            jQuery(selector).click();    
+        },1000);
+    }
+
     // create popup
     function PopupHandler(e) {
 
