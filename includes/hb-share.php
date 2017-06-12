@@ -32,8 +32,6 @@ $hideFeaturedImage = FALSE;
 		</li>
 	</ul>
 
-	<?php _e('Share','hbthemes'); ?>
-
 	<!-- BEGIN .hb-dropdown-box -->
 	<!-- <div class="hb-dropdown-box share-dropdown-box">
 		<ul class="blog-social-share">
