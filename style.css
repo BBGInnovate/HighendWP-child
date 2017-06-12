@@ -128,6 +128,12 @@ a#show-nav-menu {
 	background-color: #757575;
 }*/
 
+.share-holder {
+	display: block;
+	margin-top: 13px;
+	cursor: pointer;
+}
+
 ul.bbg__article-share {
 	border: none !important;
 	margin-top: 0;
@@ -135,54 +141,36 @@ ul.bbg__article-share {
 }
 
 li.bbg__article-share__link {
-	color: #000;
+	color: #ccc;
 	display: inline-block;
-	font-size: 40px;
+	font-size: 50px;
 	margin-right: 3px;
 }
 
-li.bbg__article-share__link.facebook {
+li.bbg__article-share__link a:hover,
+li.bbg__article-share__link a:focus {
+	color: #ccc;
+	text-decoration: none;
+}
+
+li.bbg__article-share__link a .hb-moon-facebook-2 {
 	color: #3d5a98;
 }
 
-li.bbg__article-share__link.twitter {
+li.bbg__article-share__link a .hb-moon-twitter-2 {
 	color: #55acee;
-}
-
-li.bbg__article-share__link a:hover {
-	background: none;
-	text-decoration: none;
-}
-
-li.bbg__article-share__link a:focus {
-	background: none;
-	text-decoration: none;
-}
-
-li.bbg__article-share__link:before {
-	content: "";
 }
 
 
 /* Article share links: icons */
 .bbg__article-share__icon {
-	background-color: #f1f1f1;
+	background-color: #fff;
 	display: inline-block;
 	height: 40px;
 	margin-right: .5rem;
 	vertical-align: middle;
 	width: 40px;
 }
-
-/*.bbg__article-share__icon.hb-moon-facebook-2 {
-	background-color: ;
-
-}
-
-.bbg__article-share__icon.hb-moon-twitter-2 {
-	background-color: ;
-
-}*/
 
 
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
