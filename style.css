@@ -135,34 +135,6 @@ a:focus .bbg__article-share__icon {
 		bottom: 1rem;
 	}
 
-
-
-	/*@include media ($medium-screen) {
-		margin: {
-			top: 0;
-			bottom: 0;
-		}
-	}
-	@include media($medium-large-screen) {
-		float: none;
-		margin: {
-			top: -1%;
-			right: auto;
-			left: auto;
-		}
-		/* Added to overwrite the existing margin-top applied to all UL tags by USDS :: GIGI */
-	/*}
-}
-/*
-.bbg__article-sidebar {
-	.bbg__article-share {
-		@include media($medium-large-screen) {
-			margin-left: initial;
-		}
-	}
-}*/
-
-/* Article share links */
 .bbg__article-share__link {
 	display: inline-block;
 	margin-right: 3px;
@@ -193,60 +165,15 @@ a:focus .bbg__article-share__icon {
 	width: 40px;
 }
 
-/*.bbg__contact__icon.email,
-.bbg__article-share__icon.email {
-	background: {
-		color: $color-gray-medium;
-		image: url(img/social-icons/png-white/social-icons_email.png);
-	}
-}
-
-.bbg__contact__icon.facebook,
 .bbg__article-share__icon.facebook {
-	background: {
-		color: $color-share-facebook;
-		image: url(img/social-icons/png-white/social-icons_facebook.png);
-	}
+	background-color: #3d5a98;
+
 }
 
-.bbg__contact__icon.twitter,
 .bbg__article-share__icon.twitter {
-	background: {
-		color: $color-share-twitter;
-		image: url(img/social-icons/png-white/social-icons_twitter.png);
-	}
+	background-color: #55acee;
+
 }
-
-.bbg__contact__icon.phone,
-.bbg__article-share__icon.phone {
-	background: {
-		color: $color-share-facebook;
-		image: url(img/social-icons/png-white/social-icons_phone.png);
-	}
-}
-
-.bbg__contact__icon.instagram,
-.bbg__article-share__icon.instagram {
-	background: {
-		color: $color-share-instagram;
-		image: url(img/social-icons/png-white/social-icons_instagram.png);
-	}
-}*/
-
-
-/* Article share links: text */
-.bbg__article-share__text {
-	display: none;
-	&:hover,
-	&:focus {
-		background: none;
-		text-decoration: underline;
-	}
-	@include media($medium-screen) {
-		display: inline-block;
-	}
-}
-
 
 
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
