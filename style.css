@@ -128,29 +128,28 @@ a#show-nav-menu {
 	background-color: #757575;
 }*/
 
-.bbg__article-share {
-	border: none;
-	margin: {
-		top: 0;
-		bottom: 1rem;
-	}
+ul.bbg__article-share {
+	border: none !important;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
 
-.bbg__article-share__link {
+li.bbg__article-share__link {
 	display: inline-block;
 	margin-right: 3px;
 }
 
-.bbg__article-share__link a:hover {
+li.bbg__article-share__link a:hover {
 	background: none;
 	text-decoration: none;
 }
 
-.bbg__article-share__link a:focus {
+li.bbg__article-share__link a:focus {
 	background: none;
 	text-decoration: none;
 }
 
-.bbg__article-share__link:before {
+li.bbg__article-share__link:before {
 	content: "";
 }
 
