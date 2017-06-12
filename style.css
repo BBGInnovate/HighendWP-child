@@ -137,17 +137,16 @@ ul.bbg__article-share {
 	margin-bottom: 1rem;
 }
 
-li.bbg__article-share__link {
+li.bbg__article-share__link,
+li.bbg__article-share__link:hover,
+li.bbg__article-share__link:focus {
 	color: #ccc;
 	display: inline-block;
 	font-size: 50px;
 	margin-right: 3px;
 }
 
-li.bbg__article-share__link a:hover,
-li.bbg__article-share__link a:focus {
-	background-color: #757575;
-	color: #ccc;
+li.bbg__article-share__link a:hover {
 	text-decoration: none;
 }
 
