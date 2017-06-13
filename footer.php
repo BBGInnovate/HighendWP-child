@@ -15,8 +15,8 @@
 <?php } ?>
 
 <!-- BEGIN social-buttons -->
+<a id="contact-button" class="button-top"><i class="hb-moon-twitter-2"></i></a>
 <a id="contact-button"><i class="hb-moon-facebook-2"></i></a>
-<a id="contact-button"><i class="hb-moon-twitter-2"></i></a>
 <!-- END social-buttons -->
 
 <?php if ( !is_page_template('page-blank.php') && hb_options('hb_enable_quick_contact_box') ) {
