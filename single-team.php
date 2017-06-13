@@ -39,7 +39,11 @@
 			?>
 
 			<!-- CUSTOMIZATION: Joseph Flowers for BBG on 6/13/2017 - picture for members should show up on the right -->
-			<?php $sidebar_position = 'right-sidebar'; ?>
+			<?php
+				if (has_term('icc','team_categories', get_the_ID())) {
+					$sidebar_position = 'right-sidebar';
+				} 
+			?>
 
 			<!-- BEGIN .row -->
 			<div class="row main-row <?php echo $sidebar_position; ?>">
@@ -74,9 +78,15 @@
 						$image = hb_resize( $thumb, '', 250, 250, true );
 						if ( $image && $sidebar_layout != "metasidebar" ) { 
 					?>
-					<!-- <div class="float-left hb-team-member-img">
-					Customziation JBF 6/13/2017 -->
-					<div class="float-right hb-team-member-img customTeamImage">
+					<!-- <div class="float-left hb-team-member-img"> Customization JBF 6/13/2017 -->
+					<?php 
+						$extraTeamClass = "float-left"; 
+
+						if (has_term('icc','team_categories', get_the_ID())) {
+							$extraTeamClass = "float-right ";
+						}
+					?>
+					<div class="customTeamImage hb-team-member-img <?php echo $extraTeamClass; ?>">
 						<img src="<?php echo $image['url']; ?>">
 					</div>
 					<?php } ?>
