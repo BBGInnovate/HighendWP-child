@@ -3,6 +3,17 @@
  * @package WordPress
  * @subpackage Highend
  */
+
+//the title/headline field, followed by the URL and the author's twitter handle
+$twitterText = "";
+$twitterText .= html_entity_decode( get_the_title() );
+$twitterText .= " " . get_permalink();
+$twitterText .= " via @bbggov #BBGannual";
+
+$twitterURL = "//twitter.com/intent/tweet?text=" . rawurlencode( $twitterText );
+$fbUrl = "//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
+$hideFeaturedImage = FALSE;
+
 ?>
 <?php if ( vp_metabox('misc_settings.hb_onepage') && !vp_metabox('misc_settings.hb_disable_navigation')) { ?>
 	<ul id="hb-one-page-bullets"></ul>
@@ -15,8 +26,8 @@
 <?php } ?>
 
 <!-- BEGIN social-buttons -->
-<a id="contact-button" class="button-top"><i class="hb-moon-twitter-2"></i></a>
-<a id="contact-button"><i class="hb-moon-facebook-2"></i></a>
+<a id="contact-button" class="bbg__article-share__link twitter button-top" href="<?php echo $twitterURL; ?>"><i class="hb-moon-twitter-2"></i></a>
+<a id="contact-button" class="bbg__article-share__link facebook" href="<?php echo $fbUrl; ?>" target="_blank"><i class="hb-moon-facebook-2"></i></a>
 <!-- END social-buttons -->
 
 <?php if ( !is_page_template('page-blank.php') && hb_options('hb_enable_quick_contact_box') ) {
