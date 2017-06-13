@@ -169,7 +169,7 @@ a.bbg__article-share__link .hb-moon-facebook-2 {
 a.bbg__article-share__link .hb-moon-twitter-2 {
 	color: #55acee;
 }
-.team-template-default blockquote {
+blockquote p {
 	font-family: lato;
 	font-size: 18px;
 	font-style: normal;
