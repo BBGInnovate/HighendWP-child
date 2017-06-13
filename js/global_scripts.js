@@ -54,26 +54,26 @@ jQuery( document ).ready(function() {
     };
 
     // add handler links
-    var shareLink = document.querySelectorAll('li a.bbg__article-share__link');
+    var shareLink = document.querySelectorAll('a.bbg__article-share__link');
     for (var a = 0; a < shareLink.length; a++) {
         shareLink[a].onclick = PopupHandler;
     }
 
-    
+
     urlParam = function(name){
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
         if (results==null){
         return null;
         }else{
         return results[1] || 0;
-        }   
+        }
     }
 
-    var awardFilter = urlParam( 'awardFilter' ); 
+    var awardFilter = urlParam( 'awardFilter' );
     if (awardFilter) {
         var selector = "a[data-filter='." + awardFilter + "']";
         setTimeout(function() {
-            jQuery(selector).click();    
+            jQuery(selector).click();
         },1000);
     }
 
