@@ -39,6 +39,19 @@ span.hb-light-logo.hb-logo-wrap {
 	display: none !important;
 }
 
+@media (max-width: 600px) {
+	.customTeamImage  {
+		margin-top:0rem !important;
+		margin-bottom:2rem !important;
+	}
+}
+@media (min-width: 601px) {
+	.customTeamImage  {
+		margin-top:4rem !important;
+		margin-left: 1rem !important;
+	}
+}
+
 /*** Throughout the site we have occasional need for utility classes for mobile/desktop only ***/
 @media (max-width: 767px) {
 	.mobileOnly {
@@ -155,6 +168,13 @@ a.bbg__article-share__link .hb-moon-facebook-2 {
 
 a.bbg__article-share__link .hb-moon-twitter-2 {
 	color: #55acee;
+}
+.team-template-default blockquote {
+	font-family: lato;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	color: #666;
 }
 
 /* back to top and share buttons need to be relocated */
