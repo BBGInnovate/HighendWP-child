@@ -169,7 +169,13 @@ a.bbg__article-share__link .hb-moon-facebook-2 {
 a.bbg__article-share__link .hb-moon-twitter-2 {
 	color: #55acee;
 }
-
+.team-template-default blockquote {
+	font-family: lato;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	color: #666;
+}
 
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
 are no longer coloring them so I'm removing the styles for now
