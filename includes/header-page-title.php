@@ -84,6 +84,7 @@ if ( $page_title_style == 'stroke-title' ){
 	$page_title_color = '';
 }
 ?>
+<?php if (!is_user_logged_in()):?>
 <div style="background-color:#FF0000; color:#FFFFFF; z-index:9999;  width:100%; position:fixed; top:59px; font-weight:bold; line-height:20px; font-family: verdana; font-size:12px; text-align: center;" class="usa-disclaimer">
 	<div class="usa-grid">
 		<span class="usa-disclaimer-official">
@@ -91,6 +92,7 @@ if ( $page_title_style == 'stroke-title' ){
 		</span>
 	</div>
 </div>
+<?php endif; ?>
 
 <!-- START #hb-page-title -->
 <div class="<?php echo $page_title_type; echo ' ' . $page_title_height . ' ' . $page_title_color; ?>" id="hb-page-title">
