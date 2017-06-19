@@ -504,4 +504,6 @@ p.wp-caption-text {
   line-height: 1.65em;
   font-size:13px;
   font-size:0.8125rem;
+  padding-left: 8px;
+  padding-right: 8px;
 }
