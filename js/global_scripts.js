@@ -77,6 +77,26 @@ jQuery( document ).ready(function() {
         },1000);
     }
 
+    if (jQuery('li a[data-filter=".voa-awards"]')) {
+        $el = jQuery('li a[data-filter=".voa-awards"]').parent();
+        $el.insertAfter($el.siblings(':eq(0)'));
+
+        $el = jQuery('li a[data-filter=".ocb-awards"]').parent();
+        $el.insertAfter($el.siblings(':eq(3)'));
+
+        $el = jQuery('li a[data-filter=".rfa-awards"]').parent();
+        $el.insertAfter($el.siblings(':eq(4)'));
+
+        $el = jQuery('li a[data-filter=".mbn-awards"]').parent();
+        $el.insertAfter($el.siblings(':eq(5)'));
+
+        $el = jQuery('li a[data-filter=".internet"]').parent();
+        $el.insertAfter($el.siblings(':eq(6)'));
+
+        $el = jQuery('li a[data-filter=".radio"]').parent();
+        $el.insertAfter($el.siblings(':eq(7)'));
+    }
+
     // create popup
     function PopupHandler(e) {
 
