@@ -263,7 +263,7 @@ function hotspotmap_func( $atts ) {
 	<div align="center" id="mapFilters" class="u--hide-medium-large">
 		<BR>
 		<select id="hotSpotPicker">
-			<option value="cve">CVE</option>
+			<!-- <option value="cve">CVE</option> -->
 			<option value="russia">Russia</option>
 			<option value="iran">Iran</option>
 			<option value="china">China</option>
