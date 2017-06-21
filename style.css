@@ -200,7 +200,7 @@ blockquote p {
 	bottom: 53px;
 }
 
-#main-content .vc_round-chart ul li  {
+#main-content .vc_round-chart ul li, #main-content ul.vc_chart-legend li  {
 	list-style-type:none;
 }
 
