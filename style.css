@@ -87,6 +87,10 @@ span.hb-light-logo.hb-logo-wrap {
 	background-color: #102f53 !important;
 	padding: 35px !important;
 }
+.spotlightSection h1 {
+	color: #FFFFFF !important;
+	font-weight: bold;
+}
 
 .spotlightSection a {
 	color: #9bdaf1 !important;
