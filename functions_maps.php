@@ -56,6 +56,9 @@ function ttpmap_func( $atts ) {
 			display:inline-block;
 			background: #000000;
 		}
+		#legendContainer {
+			margin-bottom: 1em;
+		}
 		
 	</style>
 
@@ -71,7 +74,7 @@ function ttpmap_func( $atts ) {
 
 	<div class="bbg__map-area__container " style="postion: relative;">
 		<div id="chartdiv"></div>
-		<div align="center" >
+		<div align="center" id="legendContainer" >
 			<div align="center" >
 				<div class="legendBox not-free"></div> Not Free 
 				<div class="legendBox partially-free"></div> Partially Free 
