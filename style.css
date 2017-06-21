@@ -1,4 +1,4 @@
-
+/*
  Theme Name:   Highend Child
  Theme URI:    http://preview.hb-themes.com/?theme=Highend
  Description:  A Flexible, Powerful & Beautiful WordPress Theme by HB-Themes. Mobile ready and optimized for best performance. With the powerful engine and user friendly interface it will allow you to build outstanding websites quick and easy... It comes with Premium Plugins integrated into the theme.
@@ -90,6 +90,15 @@ span.hb-light-logo.hb-logo-wrap {
 
 .spotlightSection a {
 	color: #9bdaf1 !important;
+}
+
+.spotlightSection blockquote p {
+	color: #EEE;
+	font-style: italic;
+}
+
+.spotlightSection blockquote:before {
+	color: #EEE;
 }
 
 .fullscreenvideo video {
