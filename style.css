@@ -217,6 +217,7 @@ a.more-link {
 	font-size: smaller;
 	font-variant: small-caps;
 	font-weight: 900;
+	word-break: keep-all;
 }
 
 a.more-link:hover,
@@ -226,8 +227,8 @@ a.more-link:visited {
 }
 
 a.more-link::after {
-	content: " »";
 	font-size: large;
+	content: "&nbsp;»";
 }
 
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
