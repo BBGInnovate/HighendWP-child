@@ -43,14 +43,14 @@ span.hb-light-logo.hb-logo-wrap {
 	.customTeamImage.float-right  {
 		margin-top:0rem !important;
 		margin-bottom:2rem !important;
-	} 
+	}
 }
 @media (min-width: 601px) {
 	.customTeamImage.float-right  {
 		margin-top:4rem !important;
 		margin-left: 1rem !important;
 		margin-bottom: 1rem !important;
-	} 
+	}
 }
 
 /*** Throughout the site we have occasional need for utility classes for mobile/desktop only ***/
@@ -201,12 +201,29 @@ blockquote p {
 }
 
 #main-content .vc_round-chart ul li, #main-content ul.vc_chart-legend li  {
-	list-style-type:none;
+	list-style-type: none;
 }
 
 p.wp-caption-text {
 	padding-left: 1em;
 	padding-right:1em;
+}
+
+a.more-link {
+	background-color: #981b1e;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: lato;
+	font-size: x-small;
+	font-variant: small-caps;
+	font-weight: 900;
+	padding: .25rem;
+	text-decoration: none;
+}
+
+a.more-link:after {
+	content: "»";
 }
 
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We

@@ -21,13 +21,13 @@ $hideFeaturedImage = FALSE;
 
 <?php if ( hb_options('hb_to_top_button') && !is_page_template('page-blank.php') ) { ?>
 <!-- Back to Top Button -->
-<a id="to-top"><i class="<?php echo hb_options('hb_back_to_top_icon'); ?>"></i></a>
+<a id="to-top" title="back to top"><i class="<?php echo hb_options('hb_back_to_top_icon'); ?>"></i></a>
 <!-- END #to-top -->
 <?php } ?>
 
 <!-- BEGIN social-buttons -->
-<a id="contact-button" class="bbg__article-share__link twitter button-top" href="<?php echo $twitterURL; ?>"><i class="hb-moon-twitter"></i></a>
-<a id="contact-button" class="bbg__article-share__link facebook" href="<?php echo $fbUrl; ?>" target="_blank"><i class="hb-moon-facebook"></i></a>
+<a id="contact-button" title="share on Twitter" class="bbg__article-share__link twitter button-top" href="<?php echo $twitterURL; ?>"><i class="hb-moon-twitter"></i></a>
+<a id="contact-button" title="share on Facebook" class="bbg__article-share__link facebook" href="<?php echo $fbUrl; ?>" target="_blank"><i class="hb-moon-facebook"></i></a>
 <!-- END social-buttons -->
 
 <?php if ( !is_page_template('page-blank.php') && hb_options('hb_enable_quick_contact_box') ) {
