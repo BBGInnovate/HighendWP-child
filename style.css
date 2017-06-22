@@ -210,30 +210,24 @@ p.wp-caption-text {
 }
 
 a.more-link {
-	background-color: #981b1e;
-	color: white;
+	color: #205493;
 	cursor: pointer;
 	display: inline-block;
 	font-family: lato;
-	font-size: x-small;
+	font-size: smaller;
 	font-variant: small-caps;
 	font-weight: 900;
-	padding: 0 .4rem;
-	text-decoration: none;
 }
 
-a.more-link:hover {
-	color: white;
-	text-decoration: underline;
-}
-
+a.more-link:hover,
 a.more-link:visited {
-	color: white;
+	color: #205493;
+	text-decoration: underline;
 }
 
 a.more-link::after {
 	content: " »";
-	font-size: initial;
+	font-size: large;
 }
 
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
