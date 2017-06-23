@@ -141,7 +141,7 @@ for (var key in spheres) {
 				}
 				cMapByID[countryID].spheres.push(key);
 			} else {
-				console.log('nothing found for ' + sphereCountries[i]);
+				//console.log('nothing found for ' + sphereCountries[i]);
 			}
 		}
 	}
@@ -266,18 +266,19 @@ function resetButtons(btnLeaveAlone) {
 		});
 
 		map.balloonLabelFunction = function (area, map) {
-			var txt = "";
-			if (activeSphere != "all") {
-				//txt= spheres[activeSphere].label + " Sphere of Influence";
-				txt = spheres[activeSphere].label;
-			} else {
-				var sphere = spheres[sMap[area.id]];
-		    	if (sphere) {
-		    		//txt = sphere.label + " Sphere of Influence";
-		    		txt = sphere.label;
-		    	}
-			}
-	    	return txt;
+			return "";
+			// var txt = "";
+			// if (activeSphere != "all") {
+			// 	//txt= spheres[activeSphere].label + " Sphere of Influence";
+			// 	txt = spheres[activeSphere].label;
+			// } else {
+			// 	var sphere = spheres[sMap[area.id]];
+		 //    	if (sphere) {
+		 //    		//txt = sphere.label + " Sphere of Influence";
+		 //    		txt = sphere.label;
+		 //    	}
+			// }
+	  //   	return txt;
 	    };
 
 		map.addListener("rollOutMapObject", function (event) {
