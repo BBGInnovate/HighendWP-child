@@ -233,6 +233,26 @@ a.more-link::after {
 	content: " »";
 }
 
+/**** FOR RESPONSIVE FACEBOOK VIDEO EMBEDS *****/
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
 are no longer coloring them so I'm removing the styles for now
 div[id^='circleTooltip_'] {
