@@ -507,3 +507,10 @@ p.wp-caption-text {
   padding-left: 8px;
   padding-right: 8px;
 }
+
+body.page-template-page-vertical-timeline a {
+  color:#4773aa;
+}
+a.cd-read-more {
+  color:#FFFFFF !important;
+}

@@ -14,44 +14,35 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
-/*** STANDARD LINK STYLES ***/
-a {
-	color: #205493;
-	/*text-decoration: underline;*/
+
+/** standard link color is set in the WordPress customizer - 
+
+Link colors defined in the customizer:;
+	"Color - top bar"
+	"Color - footer"
+	"Color - Copyright Bar"
+	"Color - Content"
+Also, "Color - Accent" has the 'hover' color for all styles
+
+**/
+
+/**** we couldn't set underlines or change the hover for links on a per section basis, so two small tweaks here ****/
+
+a:hover {
+	text-decoration: underline
 }
 
-a:visited {
-	color: #4773AA;
+/* the footer area and the mobile nav menu are dark, so we need a non-dark hover */
+#footer.dark-style div.row a:hover, 
+nav#mobile-menu:hover {
+	color: #999999 !important;
+}
+/* the three-lined button to open the navigation menu should not be underlined, even on hover */
+a#show-nav-menu {
 	text-decoration: none;
 }
 
-/*** FOOTER LINK STYLES ***/
-.footer-row a {
-	text-decoration: none;
-}
 
-.footer-row a:hover {
-	text-decoration: underline;
-}
-
-/*** In Safari, a very small line was showing in the logo ***/
-span.hb-light-logo.hb-logo-wrap {
-	display: none !important;
-}
-
-@media (max-width: 600px) {
-	.customTeamImage.float-right  {
-		margin-top:0rem !important;
-		margin-bottom:2rem !important;
-	}
-}
-@media (min-width: 601px) {
-	.customTeamImage.float-right  {
-		margin-top:4rem !important;
-		margin-left: 1rem !important;
-		margin-bottom: 1rem !important;
-	}
-}
 
 /*** Throughout the site we have occasional need for utility classes for mobile/desktop only ***/
 @media (max-width: 767px) {
@@ -71,6 +62,7 @@ span.hb-light-logo.hb-logo-wrap {
 		display: inherit !important;
 	}
 }
+
 /*** utility class for use when something must be visible ***/
 .importantVisible {
 	visibility: visible !important;
@@ -81,7 +73,6 @@ span.hb-light-logo.hb-logo-wrap {
 .spotlightSection {
 	color: #EEE;
 	font-family: "Lato", "Helvetica", "Arial", sans-serif;
-	/*font-size: 25px; */
 	font-size: 1.2em;
 	line-height: 1.65;
 	background-color: #102f53 !important;
@@ -105,22 +96,14 @@ span.hb-light-logo.hb-logo-wrap {
 	color: #EEE;
 }
 
+/* reducing flicker while homepage video loads */
 .fullscreenvideo video {
-	/* background: #062843 !important; */
-	/*background: #1273ba !important; */
 	background: #062843 !important;
 }
 
-/* the networks page has a list of languages, and the bullets need to be indented on that particualr list **/
+/* the /networks/ page has a list of languages, and the bullets need to be indented on that particular list **/
 #languageListRow ul {
 	padding-left: 20px !important;
-}
-
-
-.backgroundGradient {
-	height: 100%;
-	width: 100%;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
 }
 
 /* the font used on team member listings - which includes the Board Members and the ICC members AKA network leadership - is not customizable via the normal user interface, so we do it here  **/
@@ -128,7 +111,7 @@ span.hb-light-logo.hb-logo-wrap {
 	font-family: "Lato", sans-serif !important;
 }
 
-/* the /board page shows a list of board members. We use CSS to hide some things we don't want showing and to dampen the effect of the opacity change ***/
+/* the /board/ page shows a list of board members. We use CSS to hide some things we don't want showing and to dampen the effect of the opacity change ***/
 .team-member-img img:hover {
 	opacity: .65 !important;
 }
@@ -139,12 +122,22 @@ div.team-member-box.tmb-2 div.team-member-description a.simple-read-more {
 	display: none;
 }
 
-/* the hamburger mobile menu was including an extra underline if we didn't add this  ***/
-a#show-nav-menu {
-	text-decoration: none;
-	color: black;
+/* on ICC member pages, for example /team/voa-director/, we show images on the right,  */
+@media (max-width: 600px) {
+	.customTeamImage.float-right  {
+		margin-top:0rem !important;
+		margin-bottom:2rem !important;
+	}
+}
+@media (min-width: 601px) {
+	.customTeamImage.float-right  {
+		margin-top:4rem !important;
+		margin-left: 1rem !important;
+		margin-bottom: 1rem !important;
+	}
 }
 
+/* We want the award images to stretch to full width even if they're smaller */
 .portfolio-template-default .fw-image {
 	width: 100% !important;
 }
@@ -198,6 +191,9 @@ blockquote p {
 
 #contact-button.button-top {
 	bottom: 53px;
+}
+a#to-top:hover {
+	text-decoration: none;
 }
 
 #main-content .vc_round-chart ul li, #main-content ul.vc_chart-legend li  {
