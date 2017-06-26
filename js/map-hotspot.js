@@ -193,7 +193,8 @@ function setActiveSphere(s) {
 	var newAboutText= '';
 	if (s != 'all') {
 		newAboutText = '<h2>' + spheres[s].label + '</h2>' + spheres[s].about;
-		newAboutText += "<br/><br/><span class='readmore'><a href='" + spheres[s].link + "'>Read More »</a></span>"; 
+		//newAboutText += "<br/><br/><span class='readmore'><a href='" + spheres[s].link + "'>Read More »</a></span>"; 
+		newAboutText += "<br/><br/><a class='more-link' href='" + spheres[s].link + "'>READ MORE</a>";
 	}
 	jQuery('div.dynamicHotSpotText').html(newAboutText).selectionSharer();
 	var newAreas = getAreas(s);
@@ -350,7 +351,8 @@ function resetButtons(btnLeaveAlone) {
 				var c = cMapByID[countryID];
 				var s = spheres[primarySphere];
 				var newAboutText = '<h2>' + s.label + '</h2>' + s.about;
-				newAboutText += "<BR><BR><span class='readmore'><a href='" + s.link + "'> Read More »</a></span>";
+				//newAboutText += "<BR><BR><span class='readmore'><a href='" + s.link + "'> Read More »</a></span>";
+				newAboutText += "<br/><br/><a class='more-link' href='" + s.link + "'>READ MORE</a>";
 				jQuery('div.dynamicHotSpotText').html(newAboutText);
 
 				event.mapObject.color = s.color;
