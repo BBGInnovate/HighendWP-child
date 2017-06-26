@@ -17,7 +17,7 @@
 /*** STANDARD LINK STYLES ***/
 a {
 	color: #205493;
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
 a:visited {
