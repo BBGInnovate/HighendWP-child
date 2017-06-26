@@ -125,6 +125,15 @@ div.team-member-box.tmb-2 div.team-member-description a.simple-read-more {
 		margin-top:0rem !important;
 		margin-bottom:2rem !important;
 	}
+	.customTeamImage.float-left {
+		float:none !important;
+		margin-top:0rem !important;
+		margin-bottom:2rem !important;
+		text-align:center;
+	}
+	.customTeamImage.float-left img {
+		width:80% !important;
+	}
 }
 @media (min-width: 601px) {
 	.customTeamImage.float-right  {
