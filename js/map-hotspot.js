@@ -82,7 +82,7 @@ var spheres = {
 		influences: [],
 		color: colors['ssa'],
 		label: "Sub-Saharan Africa",
-		about: "Although Sub-Saharan Africa was not explicitly named as one of the top five priorities, the work that BBG broadcasters do there is significant. According to Freedom House, 94% of countries in Sub-Saharan Africa have a Partly Free or Not Free media environment. VOA broadcasts in more than a dozen languages throughout the region, providing what is often the only source of unbiased news and information.",
+		about: "Although Sub-Saharan Africa was not explicitly named as one of the top five priorities, the work that BBG broadcasters do there is significant. According to Freedom House, 94% of countries in sub-Saharan Africa have a Partly Free or Not Free media environment. VOA broadcasts in more than a dozen languages throughout the region, providing what is often the only source of unbiased news and information.",
 		link: "/responding-to-unique-news-needs-in-africa/"
 	},
 	cve: {
@@ -193,7 +193,7 @@ function setActiveSphere(s) {
 	var newAboutText= '';
 	if (s != 'all') {
 		newAboutText = '<h2>' + spheres[s].label + '</h2>' + spheres[s].about;
-		newAboutText += "<br/><br/><span class='more-link'><a href='" + spheres[s].link + "'> Read More</a></span>";
+		newAboutText += "<br/><br/><a class='more-link' href='" + spheres[s].link + "'> Read More</a>";
 	}
 	jQuery('div.dynamicHotSpotText').html(newAboutText).selectionSharer();
 	var newAreas = getAreas(s);
