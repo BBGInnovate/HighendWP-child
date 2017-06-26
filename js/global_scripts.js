@@ -20,7 +20,9 @@ function isMobileDevice () {
 jQuery( document ).ready(function() {
 
 	// enable the tooltip that shows up when you highlight text with a maouse
-    jQuery('p,h4,h1,h2,h3').selectionSharer();
+    if(typeof(window.SelectionSharer) == "function") {
+        jQuery('p,h4,h1,h2,h3').selectionSharer();
+    }
 
     // add interactivity to the circular svg on the networks page
     jQuery("path[class$='_circle'],g[class$='_circle']").css('cursor','pointer');
