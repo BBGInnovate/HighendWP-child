@@ -11,7 +11,7 @@
 */
 
 
-/* =Theme customization starts here
+/* =Theme customization starts here 
 -------------------------------------------------------------- */
 
 
@@ -27,22 +27,19 @@ Also, "Color - Accent" has the 'hover' color for all styles
 **/
 
 /**** we couldn't set underlines or change the hover for links on a per section basis, so two small tweaks here ****/
-
 a:hover {
 	text-decoration: underline
 }
 
 /* the footer area and the mobile nav menu are dark, so we need a non-dark hover */
 #footer.dark-style div.row a:hover, 
-nav#mobile-menu:hover {
+nav#mobile-menu ul li a:hover {
 	color: #999999 !important;
 }
 /* the three-lined button to open the navigation menu should not be underlined, even on hover */
-a#show-nav-menu {
+a#show-nav-menu, ol.flex-control-nav a:hover {
 	text-decoration: none;
 }
-
-
 
 /*** Throughout the site we have occasional need for utility classes for mobile/desktop only ***/
 @media (max-width: 767px) {
