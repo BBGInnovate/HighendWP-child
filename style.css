@@ -252,6 +252,35 @@ a.more-link::after {
     width: 100%;
     height: 100%;
 }
+a.more-link:focus {
+	background: #dce4ef;
+}
+a.hb-button:focus {
+	text-decoration: underline;
+	background: #CCC;
+	color: #154178 !important;
+	box-shadow:none;
+	outline: 2px solid #4773aa;
+	outline-offset: -1px;
+
+}
+a.hb-button:focus i {
+	text-decoration: none;
+}
+div.footer-row a:focus, div.footer-row a:focus i {
+	background: #999;
+}
+div.footer-row a:focus img {
+	opacity: 0.8;
+	outline: 2px solid #4773aa;
+	outline-offset: -1px;
+}
+div.read-more-square a:focus img {
+	/*opacity: 0.6;*/
+	outline: 2px solid #4773aa;
+	outline-offset: -1px;
+
+} 
 
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
 are no longer coloring them so I'm removing the styles for now
@@ -266,7 +295,7 @@ div[id^='circleTooltip_'] {
 }
 #circleTooltip_rfa {
   background: #2D655E;
-}
+}					
 #circleTooltip_mbn {
   background: #7E3536;
 }
@@ -276,3 +305,4 @@ div[id^='circleTooltip_'] {
 #circleTooltip_rferl {
   background: #887639;
 }
+
