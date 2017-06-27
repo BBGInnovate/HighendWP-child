@@ -278,6 +278,16 @@ div.footer-row a:focus img {
 	outline: 2px solid #4773aa;
 	outline-offset: -1px;
 }
+div.footer-row a:focus img {
+	opacity: 0.8;
+	outline: 2px solid #4773aa;
+	outline-offset: -1px;
+}
+
+div.footer-row a#bbglogo {
+	background: none;
+}
+
 div.read-more-square a:focus img {
 	/*opacity: 0.6;*/
 	outline: 2px solid #4773aa;
