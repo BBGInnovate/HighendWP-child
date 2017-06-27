@@ -280,6 +280,9 @@ div.read-more-square a:focus img {
 	outline: 2px solid #4773aa;
 	outline-offset: -1px;
 
+}
+.bbg__article-share__link:focus, a#to-top:focus {
+	background-color: #4773aa !important;
 } 
 
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
