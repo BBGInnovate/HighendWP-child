@@ -28,7 +28,10 @@ Also, "Color - Accent" has the 'hover' color for all styles
 
 /**** we couldn't set underlines or change the hover for links on a per section basis, so two small tweaks here ****/
 a:hover {
-	text-decoration: underline
+	text-decoration: underline;
+}
+a:focus {
+	outline: 1px dotted #4773aa;
 }
 
 /* the footer area and the mobile nav menu are dark, so we need a non-dark hover */
