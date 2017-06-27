@@ -288,6 +288,17 @@ div.read-more-square a:focus img {
 	background-color: #4773aa !important;
 } 
 
+/* video on 'engaging with video' section of 'shift to digital' */
+.floatRightVideo {
+	margin-bottom: 2em !important;
+}
+@media (min-width: 900px) {
+	.floatRightVideo {
+		float:right;
+		margin-left: 2em;
+	}
+}
+
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
 are no longer coloring them so I'm removing the styles for now
 div[id^='circleTooltip_'] {
