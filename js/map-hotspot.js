@@ -428,6 +428,26 @@ function resetButtons(btnLeaveAlone) {
 			}
 
 		});
+		jQuery('.entity-buttons button').focusin(function(e) {
+			resetButtons();
+
+			var val = jQuery(this).val();
+			if (val != activeSphere) {
+				jQuery(this).css('color',colors[val]);
+				jQuery(this).css('background-color','#FFFFFF');
+			}
+		});
+
+		jQuery('.entity-buttons button').focusout(function(e) {
+			resetButtons();
+
+			var val = jQuery(this).val();
+			if (val != activeSphere) {
+				jQuery(this).css('color','#FFFFFF');
+				jQuery(this).css('background-color',colors[val]);
+			}
+
+		});
 
 		jQuery('.entity-buttons button').click(function(e) {
 			var val = jQuery(this).val();
