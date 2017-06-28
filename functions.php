@@ -37,7 +37,7 @@ function highend_child_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'highend_child_theme_enqueue_styles' );
 
 function fb_appID() {
-?><meta property="fb:app_id" content="1288914594517692" /><?php
+?><!--<meta property="fb:app_id" content="1288914594517692" />--><?php
 }
 add_action('wp_head', 'fb_appID', 5);
 
