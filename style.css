@@ -33,6 +33,9 @@ a:hover {
 a:focus {
 	outline: 1px dotted #4773aa;
 }
+div#btnPlay:focus {
+	background: #9f1d26 !important;
+} 
 
 /* the footer area and the mobile nav menu are dark, so we need a non-dark hover */
 #footer.dark-style div.row a:hover, 

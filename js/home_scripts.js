@@ -12,6 +12,15 @@ jQuery( document ).ready(function() {
 	}
 	setTimeout(showButton,2000);
 
+	jQuery('#btnPlay').prop('tabindex',0);
+	jQuery('#btnPlay').keypress(function (e) {
+		if (e.which == 13) {
+			PUM.open(933);
+			return false;   
+		}
+	});
+
+
 	jQuery(document).on('pumBeforeOpen', '.pum', function () {
 		var $iframe = jQuery('iframe', jQuery(this));
 			if ("undefined" === typeof window.popSrc) {
