@@ -11,11 +11,11 @@
 */
 
 
-/* =Theme customization starts here 
+/* =Theme customization starts here
 -------------------------------------------------------------- */
 
 
-/** standard link color is set in the WordPress customizer - 
+/** standard link color is set in the WordPress customizer -
 
 Link colors defined in the customizer:;
 	"Color - top bar"
@@ -26,6 +26,10 @@ Also, "Color - Accent" has the 'hover' color for all styles
 
 **/
 
+h1,h2,h3,h4,h5,h6,p {
+	word-break: keep-all;
+}
+
 /**** we couldn't set underlines or change the hover for links on a per section basis, so two small tweaks here ****/
 a:hover {
 	text-decoration: underline;
@@ -35,10 +39,10 @@ a:focus {
 }
 div#btnPlay:focus {
 	background: #9f1d26 !important;
-} 
+}
 
 /* the footer area and the mobile nav menu are dark, so we need a non-dark hover */
-#footer.dark-style div.row a:hover, 
+#footer.dark-style div.row a:hover,
 nav#mobile-menu ul li a:hover {
 	color: #999999 !important;
 }
@@ -299,7 +303,7 @@ div.read-more-square a:focus img {
 }
 .bbg__article-share__link:focus, a#to-top:focus {
 	background-color: #4773aa !important;
-} 
+}
 
 /* video on 'engaging with video' section of 'shift to digital' */
 .floatRightVideo {
@@ -329,7 +333,7 @@ div[id^='circleTooltip_'] {
 }
 #circleTooltip_rfa {
   background: #2D655E;
-}					
+}
 #circleTooltip_mbn {
   background: #7E3536;
 }
