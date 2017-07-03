@@ -277,19 +277,11 @@ function hotspotmap_func( $atts ) {
 
 
 		<div id="chartdiv"></div>
-	<!-- <div style="margin-top:1rem;" class="u--show-medium-large"><em>Hover over a country to highlight other countries in its primary hot spot.  Use the buttons at the top to view hot spots one at a time.</em></div><BR> -->
-	<!--
-	<div align="left" class="u--hide-medium-large">
-		<div align="center" >
-			<div class="legendBox china"></div> China 
-			<div class="legendBox cuba"></div> Cuba 
-			<div class="legendBox iran"></div> Iran 
-			<div class="legendBox russia"></div> Russia<BR>
-			<div class="legendBox cve"></div> CVE
-			<div class="legendBox ssa"></div> Subsaharan Africa
-		</div>
-	</div>
-	-->
+		
+		<!-- BEGIN TWEET BUTTON -->
+		<div align="right"><a class="bbg__article-share__link" href="<?php echo rawurlencode('#BBGannualreport shows how we address info needs of audiences in press-restrictive regions: http://pic.twitter.com/Jj8N6ghu12 https://2016.bbg.gov'); ?>"><button class="tweet-this">Tweet this map</button></a></div>
+		<!-- END TWEET BUTTON -->
+	
 <?php 
 		$str = ob_get_clean();
 	    return $str;

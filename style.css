@@ -321,6 +321,12 @@ div.read-more-square a:focus img {
 	color:#FFFFFF;
 }
 
+/* tweet this button for special content like the targeting resources map, Jeff Shell quotes, and getting results animation */
+button.tweet-this {
+	margin-top: 0.25em;
+	margin-right:0em !important;
+	width: auto !important;
+}
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
 are no longer coloring them so I'm removing the styles for now
 div[id^='circleTooltip_'] {
