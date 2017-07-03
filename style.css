@@ -26,7 +26,7 @@ Also, "Color - Accent" has the 'hover' color for all styles
 
 **/
 /* Fixing word break issue on homepage */
-.wpb_content_element h1, .wpb_content_element h2, .wpb_content_element h3, .wpb_content_element h4, .wpb_content_element h5, .wpb_content_element h6, .wpb_content_element p {
+h1, h2, h3, h4, h5, h6, p {
 	word-wrap: initial;
 	word-break: keep-all;
 }
