@@ -322,11 +322,30 @@ div.read-more-square a:focus img {
 }
 
 /* tweet this button for special content like the targeting resources map, Jeff Shell quotes, and getting results animation */
+
 button.tweet-this {
-	margin-top: 0.25em;
-	margin-right:0em !important;
-	width: auto !important;
+  margin-top: 0.25em;
+  margin-right: 0em;
+  margin-bottom: 0.25em;
+  appearance: none;
+  background-color: #0071bc;
+  border: 0;
+  border-radius: 0.15rem;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1;
+  outline: none;
+  padding: .5rem .3rem;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-font-smoothing: antialiased;
 }
+		
 /*  the circular SVG originally has tooltips that show when you hover over a network. They were originally colored so we developed these styles. We
 are no longer coloring them so I'm removing the styles for now
 div[id^='circleTooltip_'] {
