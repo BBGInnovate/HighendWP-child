@@ -279,7 +279,7 @@ function hotspotmap_func( $atts ) {
 		<div id="chartdiv"></div>
 		
 		<!-- BEGIN TWEET BUTTON -->
-		<div align="right"><a class="bbg__article-share__link" href="<?php echo rawurlencode('#BBGannualreport shows how we address info needs of audiences in press-restrictive regions: http://pic.twitter.com/Jj8N6ghu12 https://2016.bbg.gov'); ?>"><button class="tweet-this">Tweet this map</button></a></div>
+		<div align="right"><a class="bbg__article-share__link" href="https://twitter.com/intent/tweet?text=<?php echo rawurlencode('#BBGannualreport shows how we address info needs of audiences in press-restrictive regions: http://pic.twitter.com/Jj8N6ghu12 https://2016.bbg.gov'); ?>"><button class="tweet-this">Tweet this map</button></a></div>
 		<!-- END TWEET BUTTON -->
 	
 <?php 
