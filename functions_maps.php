@@ -256,8 +256,11 @@ function hotspotmap_func( $atts ) {
 	<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/mapdata-worldLow.js'></script>
 	<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/map-hotspot.js'></script>
 	
-	<div class="btn-group entity-buttons u--show-medium-large" role="group" aria-label="..." style="clear: none;">
-		<!--<button type="button" title="COUNTERING VIOLENT EXTREMISM" class=" btn-default cve" value="cve"><span class="bbg__map__button-text">CVE</span></button>--><!--
+	<div class="btn-group entity-buttons u--show-medium-large" role="group" aria-label="..." style="clear: none;"><?php 
+			if (isset($_GET['includeCVE'])) {
+				echo '<button type="button" title="COUNTERING VIOLENT EXTREMISM" class=" btn-default cve" value="cve"><span class="bbg__map__button-text">CVE</span></button>';
+			}; 
+		?><!--
 		--><button type="button" title="RUSSIA" class=" btn-default russia" value="russia"><span class="bbg__map__button-text">RUSSIA</span></button><!--
 		--><button type="button" title="IRAN" class=" btn-default iran" value="iran"><span class="bbg__map__button-text">IRAN</span></button><!--
 		--><button type="button" title="CHINA" class=" btn-default china" value="china"><span class="bbg__map__button-text">CHINA</span></button><!--
@@ -266,8 +269,9 @@ function hotspotmap_func( $atts ) {
 	<div align="center" id="mapFilters" class="u--hide-medium-large">
 		<BR>
 		<select id="hotSpotPicker">
-			<!-- <option value="cve">CVE</option> -->
-			<option value="russia">Russia</option>
+			?><?php if (isset($_GET['includeCVE'])) {
+				echo '<option value="cve">CVE</option>';
+			}; ?><option value="russia">Russia</option>
 			<option value="iran">Iran</option>
 			<option value="china">China</option>
 			<option value="cuba">Cuba</option>

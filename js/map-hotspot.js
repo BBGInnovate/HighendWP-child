@@ -460,7 +460,13 @@ function resetButtons(btnLeaveAlone) {
 
 		});
 	    resetButtons();
-	    jQuery('.entity-buttons button.russia').trigger( "click" );
+	    
+	    if (window.location.href.indexOf('includeCVE') >=0) {
+	    	jQuery('.entity-buttons button.cve').trigger( "click" );
+	    } else {
+	    	jQuery('.entity-buttons button.russia').trigger( "click" );
+	    }
+	    
 	    //initMobileLegend();
 
 	});
